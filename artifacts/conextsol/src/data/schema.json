@@ -1,0 +1,16 @@
+{
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "Conextsol",
+  "url": "https://conextsol.co.za",
+  "logo": "https://conextsol.co.za/logo.png",
+  "description": "South Africa's results-driven web design and development studio",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cape Town",
+    "addressCountry": "ZA"
+  },
+  "areaServed": ["Johannesburg", "Cape Town", "Durban", "Pretoria", "South Africa"],
+  "serviceType": ["Web Design", "Web Development", "Custom Software Development", "UI/UX Design", "E-commerce Development"],
+  "telephone": "+27 66 119 2498",
+  "email": "info@conextsol.co.za"
+}

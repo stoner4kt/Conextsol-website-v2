@@ -1,0 +1,22 @@
+# Conextsol — Web Design & Development South Africa
+> A results-driven web design, web development, and custom software studio serving South African businesses.
+
+## About
+Conextsol builds fast, beautiful, high-converting websites and custom software for South African SMEs, startups, and professional service firms. Based in South Africa, serving clients in Johannesburg, Cape Town, Durban, Pretoria, and nationwide.
+
+## Services
+- Website Design: /services/website-design
+- Web Development: /services/web-development
+- Custom Software Development: /services/custom-software-development
+- UI/UX Design: /services/ui-ux-design
+- E-commerce Development: /services/ecommerce-development
+- Website Maintenance & Optimization: /services/website-maintenance
+
+## Key Pages
+- Home: /
+- Services: /services
+- Portfolio: /portfolio
+- About: /about
+- Blog: /blog
+- FAQ: /faq
+- Contact: /contact

@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "artifacts/conextsol"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=artifacts/conextsol",
+    "build": "npm run build --workspace=artifacts/conextsol",
+    "typecheck": "npm run typecheck --workspace=artifacts/conextsol",
+    "lint": "npm run typecheck --workspace=artifacts/conextsol"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5",
+    "typescript": "~5.9.3"
+  }
+}
