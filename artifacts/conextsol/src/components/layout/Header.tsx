@@ -30,11 +30,11 @@ export function Header() {
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 overflow-hidden transition-all duration-300 border-b border-transparent',
-        isScrolled ? 'bg-background/90 backdrop-blur-md border-border shadow-sm' : 'bg-background/55 backdrop-blur-sm'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent',
+        isScrolled ? 'bg-background/90 backdrop-blur-md border-border shadow-sm' : 'bg-background/80 backdrop-blur-sm'
       )}
     >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <img
           src={logoImg}
           alt=""
@@ -110,11 +110,12 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 -mr-2 z-50 relative"
+            className="md:hidden p-2.5 -mr-2 z-50 relative rounded-lg border border-border/50 bg-background/80 text-foreground hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-primary" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -123,21 +124,33 @@ export function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg md:hidden overflow-hidden max-h-[calc(100dvh-80px)] overflow-y-auto"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b border-border shadow-2xl md:hidden overflow-hidden max-h-[calc(100dvh-80px)] overflow-y-auto z-50"
           >
-            <nav className="flex flex-col p-4 gap-2">
-              <Link href="/" className="px-4 py-3 text-lg font-medium rounded-lg hover:bg-muted">Home</Link>
+            <nav className="flex flex-col p-4 gap-1.5 container mx-auto">
+              <Link 
+                href="/" 
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors flex items-center justify-between",
+                  location === '/' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                Home
+              </Link>
               
               <div className="flex flex-col">
                 <button 
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="px-4 py-3 text-lg font-medium flex items-center justify-between rounded-lg hover:bg-muted"
+                  className={cn(
+                    "px-4 py-3 text-base font-medium flex items-center justify-between rounded-xl hover:bg-muted/80 transition-colors w-full text-left",
+                    location.startsWith('/services') ? "text-primary font-semibold" : "text-foreground"
+                  )}
                 >
-                  Services
-                  <ChevronDown className={cn("w-5 h-5 transition-transform", servicesOpen && "rotate-180")} />
+                  <span>Services</span>
+                  <ChevronDown className={cn("w-5 h-5 transition-transform duration-300", servicesOpen && "rotate-180")} />
                 </button>
                 <AnimatePresence>
                   {servicesOpen && (
@@ -145,29 +158,79 @@ export function Header() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      className="flex flex-col gap-1 pl-8 pr-4 overflow-hidden"
+                      transition={{ duration: 0.2 }}
+                      className="flex flex-col gap-1 pl-6 pr-2 py-1 overflow-hidden"
                     >
-                      <Link href="/services" className="py-2 text-primary font-medium">All Services</Link>
+                      <Link 
+                        href="/services" 
+                        className={cn(
+                          "px-3 py-2 text-sm rounded-lg font-medium hover:bg-muted/60 transition-colors",
+                          location === '/services' ? "text-primary font-semibold" : "text-primary"
+                        )}
+                      >
+                        All Services →
+                      </Link>
                       {services.map(s => (
-                        <Link key={s.slug} href={`/services/${s.slug}`} className="py-2 text-muted-foreground">{s.shortTitle}</Link>
+                        <Link 
+                          key={s.slug} 
+                          href={`/services/${s.slug}`} 
+                          className={cn(
+                            "px-3 py-2 text-sm rounded-lg transition-colors hover:bg-muted/60",
+                            location === `/services/${s.slug}` ? "text-primary font-medium bg-primary/5" : "text-muted-foreground hover:text-foreground"
+                          )}
+                        >
+                          {s.shortTitle}
+                        </Link>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              <Link href="/portfolio" className="px-4 py-3 text-lg font-medium rounded-lg hover:bg-muted">Portfolio</Link>
-              <Link href="/about" className="px-4 py-3 text-lg font-medium rounded-lg hover:bg-muted">About</Link>
-              <Link href="/blog" className="px-4 py-3 text-lg font-medium rounded-lg hover:bg-muted">Blog</Link>
-              <Link href="/faq" className="px-4 py-3 text-lg font-medium rounded-lg hover:bg-muted">FAQ</Link>
+              <Link 
+                href="/portfolio" 
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
+                  location === '/portfolio' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                Portfolio
+              </Link>
+              <Link 
+                href="/about" 
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
+                  location === '/about' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                About
+              </Link>
+              <Link 
+                href="/blog" 
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
+                  location.startsWith('/blog') ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                Blog
+              </Link>
+              <Link 
+                href="/faq" 
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
+                  location === '/faq' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                FAQ
+              </Link>
               
-              <div className="h-px bg-border my-4 mx-4" />
+              <div className="h-px bg-border/60 my-3 mx-2" />
               
-              <div className="flex flex-col gap-3 px-4 pb-8">
-                <Button className="w-full justify-center" size="lg" asChild>
+              <div className="flex flex-col gap-3 px-2 pt-1 pb-6">
+                <Button className="w-full justify-center text-base py-6 shadow-md" size="lg" asChild>
                   <Link href="/contact">Get a Quote</Link>
                 </Button>
-                <Button variant="outline" className="w-full justify-center" size="lg" asChild>
+                <Button variant="outline" className="w-full justify-center text-base py-6 border-border/80" size="lg" asChild>
                   <a href="https://wa.me/27661192498?text=Hi%20Conextsol%2C%20I%27m%20interested%20in%20a%20website%20quote" target="_blank" rel="noopener noreferrer">
                     WhatsApp Us
                   </a>
