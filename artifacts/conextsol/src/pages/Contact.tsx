@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { motion } from 'framer-motion';
@@ -10,6 +11,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { Mail, MapPin, Phone, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -17,7 +20,8 @@ function WhatsAppIcon({ size = 24 }: { size?: number }) {
     </svg>
   );
 }
-import { Mail, MapPin, Phone } from 'lucide-react';
+
+const WORKER_URL = import.meta.env.VITE_WORKER_URL || "YOUR_WORKER_URL";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name is required"),
@@ -31,6 +35,9 @@ const formSchema = z.object({
 
 export default function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState<string>('');
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,17 +52,46 @@ export default function Contact() {
     }
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is where we would send the data to the backend API (e.g. using Orval hooks or a custom endpoint)
-    // For now, it's client-side only.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setStatusMessage('');
 
-    toast({
-      title: "Thank you!",
-      description: "We've received your inquiry and will be in touch within 24 hours.",
-    });
+    try {
+      const response = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
 
-    form.reset();
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success !== false) {
+        setSubmitStatus('success');
+        const successMsg = "Message sent! We will get back to you shortly.";
+        setStatusMessage(successMsg);
+        toast({
+          title: "Thank you!",
+          description: successMsg,
+        });
+        form.reset();
+      } else {
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      const errorMsg = "Something went wrong. Please try again or contact us directly.";
+      setStatusMessage(errorMsg);
+      toast({
+        title: "Submission Error",
+        description: errorMsg,
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -278,8 +314,34 @@ export default function Contact() {
                       )}
                     />
 
-                    <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold">
-                      Submit Inquiry
+                    {submitStatus === 'success' && (
+                      <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-500" />
+                        <span className="font-medium text-sm">{statusMessage}</span>
+                      </div>
+                    )}
+
+                    {submitStatus === 'error' && (
+                      <div className="p-4 rounded-xl bg-destructive/10 border border-destructive/30 text-destructive flex items-center gap-3">
+                        <AlertCircle className="w-5 h-5 shrink-0 text-destructive" />
+                        <span className="font-medium text-sm">{statusMessage}</span>
+                      </div>
+                    )}
+
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      disabled={isSubmitting} 
+                      className="w-full h-14 text-lg font-bold"
+                    >
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          Sending...
+                        </span>
+                      ) : (
+                        "Submit Inquiry"
+                      )}
                     </Button>
                     <p className="text-xs text-center text-muted-foreground mt-4">
                       By submitting this form, you agree to our Privacy Policy and consent to us contacting you.
