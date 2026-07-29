@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Twitter, Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import logoImg from '@assets/logo.png';
 
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
@@ -29,13 +29,22 @@ export function Footer() {
               South Africa's results-driven web design and custom software development studio. We build digital assets that grow your business.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="Twitter / X">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="Facebook">
+              <a 
+                href="https://www.facebook.com/share/1CuQspKwuJ/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" 
+                aria-label="Facebook"
+              >
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="Instagram">
+              <a 
+                href="https://www.instagram.com/conextsol?igsh=M2c0cnJlbWVmN3B1" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" 
+                aria-label="Instagram"
+              >
                 <Instagram size={18} />
               </a>
             </div>
