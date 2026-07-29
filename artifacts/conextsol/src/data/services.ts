@@ -1,10 +1,10 @@
 export const services = [
   {
     slug: 'website-design',
-    title: 'Professional Website Design in South Africa',
+    title: 'Professional Website Design in Cape Town & South Africa',
     shortTitle: 'Website Design',
     description: 'Beautiful, high-converting websites that establish your brand and drive actual business results.',
-    longDescription: 'In today’s competitive South African market, your website is your digital storefront. A poorly designed site costs you credibility and clients. At Conextsol, we design pixel-perfect, mobile-first websites tailored to your unique brand identity. We balance stunning visual aesthetics with proven conversion rate optimization (CRO) principles, ensuring your site doesn’t just look good, but actively turns visitors into paying customers. From corporate portals to creative portfolios, we build websites that work for you 24/7.',
+    longDescription: 'Conextsol provides professional website design services in Cape Town and across South Africa for businesses seeking high-converting digital storefronts. Our custom website design service combines mobile-first visual design with conversion rate optimization (CRO) principles to turn web visitors into paying customers. From corporate portals to creative portfolios, we build pixel-perfect, accessible websites tailored to your unique brand identity.',
     icon: 'Layout',
     features: [
       'Custom UI/UX Design tailored to your brand',
@@ -14,9 +14,9 @@ export const services = [
       'Fast-loading optimized assets',
       'Interactive Framer Motion animations'
     ],
-    targetAudience: 'South African SMEs, startups, and professional service firms looking to establish a premium online presence.',
-    metaTitle: 'Website Design South Africa | Conextsol',
-    metaDescription: 'Professional website design services in South Africa. Conextsol builds fast, beautiful, high-converting websites for businesses in Johannesburg, Cape Town & nationwide.',
+    targetAudience: 'Cape Town and South African SMEs, startups, and professional service firms looking to establish a premium online presence.',
+    metaTitle: 'Website Design Cape Town & South Africa | Conextsol',
+    metaDescription: 'Professional website design agency in Cape Town, South Africa. Conextsol builds fast, beautiful, high-converting websites for businesses in Cape Town, JHB & nationwide.',
     faq: [
       {
         question: 'How long does a website design take?',
@@ -42,10 +42,10 @@ export const services = [
   },
   {
     slug: 'web-development',
-    title: 'Custom Web Development South Africa',
+    title: 'Custom Web Development Cape Town & South Africa',
     shortTitle: 'Web Development',
     description: 'Robust, scalable, and secure front-end and back-end development for modern web applications.',
-    longDescription: 'Great design needs powerful engineering behind it. Our web development team builds fast, secure, and scalable solutions using the latest tech stacks (React, Next.js, Node.js). Whether you need a complex corporate portal, an API integration, or a headless CMS architecture, we write clean, maintainable code. We focus heavily on performance optimization to ensure fast load times on South African mobile networks, significantly improving user experience and SEO rankings.',
+    longDescription: 'Conextsol delivers custom web development in Cape Town and nationwide across South Africa for organizations needing fast, secure web applications. Our development team writes clean TypeScript code using modern engineering stacks like React, Next.js, and Node.js. We focus heavily on sub-2-second performance optimization on South African mobile networks to maximize user retention and search engine rankings.',
     icon: 'Code2',
     features: [
       'Modern Tech Stack (React, Next.js, Node.js)',
@@ -55,9 +55,9 @@ export const services = [
       'Advanced Security Implementation',
       'Scalable Database Architecture'
     ],
-    targetAudience: 'Businesses needing complex web architecture, portals, or migrations to modern tech stacks.',
-    metaTitle: 'Web Development South Africa | Conextsol',
-    metaDescription: 'Expert web development in South Africa. We build fast, scalable, and secure web applications using modern technologies.',
+    targetAudience: 'Businesses in Cape Town and across South Africa needing complex web architecture, portals, or migrations to modern tech stacks.',
+    metaTitle: 'Web Development Cape Town & South Africa | Conextsol',
+    metaDescription: 'Expert web development in Cape Town and South Africa. We build fast, scalable, and secure web applications using modern technologies.',
     faq: [
       {
         question: 'What technologies do you use?',
@@ -83,10 +83,10 @@ export const services = [
   },
   {
     slug: 'custom-software-development',
-    title: 'Custom Software & Web App Development',
+    title: 'Custom Software & Web App Development Cape Town',
     shortTitle: 'Custom Software',
     description: 'Tailor-made software solutions that streamline your operations and solve complex business challenges.',
-    longDescription: 'Off-the-shelf software often falls short of specific business needs, forcing you to adapt your processes to the tool. We do the opposite. Conextsol builds bespoke web applications, CRMs, client portals, and internal tools designed exactly for your workflow. By automating repetitive tasks, centralizing data, and creating intuitive user interfaces, our custom software solutions drive efficiency and give your South African business a distinct competitive advantage.',
+    longDescription: 'Conextsol provides custom software development in Cape Town and South Africa for growing enterprises and startups requiring bespoke business tools. We design and construct tailor-made web applications, CRMs, client portals, and automated internal dashboards aligned with your exact operational workflows. Our custom software centralizes business data, automates manual administration, and delivers a lasting competitive advantage.',
     icon: 'TerminalSquare',
     features: [
       'Bespoke Web Applications (SaaS)',
@@ -96,9 +96,9 @@ export const services = [
       'Secure Client Portals',
       'Cloud Architecture & Deployment'
     ],
-    targetAudience: 'Growing enterprises and startups that need proprietary tools to manage unique processes or launch new digital products.',
-    metaTitle: 'Custom Software Development South Africa | Conextsol',
-    metaDescription: 'Bespoke custom software and web app development for South African businesses. We build CRMs, portals, and SaaS products.',
+    targetAudience: 'Growing enterprises and startups in Cape Town and nationwide needing proprietary software to automate workflows or launch SaaS products.',
+    metaTitle: 'Custom Software Development Cape Town & SA | Conextsol',
+    metaDescription: 'Bespoke custom software and web app development in Cape Town & South Africa. We build CRMs, portals, and SaaS products.',
     faq: [
       {
         question: 'Why should I choose custom software over off-the-shelf?',
@@ -124,10 +124,10 @@ export const services = [
   },
   {
     slug: 'ui-ux-design',
-    title: 'UI/UX Design Services South Africa',
+    title: 'UI/UX Design Services Cape Town & South Africa',
     shortTitle: 'UI/UX Design',
     description: 'Data-driven user experience and user interface design that delights users and maximizes conversions.',
-    longDescription: 'A product is only as good as its user experience. Our UI/UX design process is rooted in deep user research and behavioral psychology. We design wireframes, interactive prototypes, and high-fidelity interfaces that are intuitive, accessible, and beautiful. Whether you are launching a new app or redesigning an existing platform, we ensure that every click is purposeful, minimizing friction and maximizing user satisfaction and conversion rates.',
+    longDescription: 'Conextsol offers specialized UI/UX design services in Cape Town and South Africa for digital products, SaaS platforms, and enterprise web applications. Our design process combines user behavioral research, Figma wireframing, and interactive prototyping to eliminate friction from user journeys. We deliver intuitive, accessible digital interfaces that elevate brand engagement and maximize customer conversion rates.',
     icon: 'Figma',
     features: [
       'In-depth User Research & Personas',
@@ -138,8 +138,8 @@ export const services = [
       'Conversion Rate Optimization (CRO)'
     ],
     targetAudience: 'Product teams, SaaS companies, and businesses wanting to overhaul their digital user experience.',
-    metaTitle: 'UI/UX Design South Africa | Conextsol',
-    metaDescription: 'Expert UI/UX design services in South Africa. We create beautiful, intuitive, and high-converting digital experiences.',
+    metaTitle: 'UI/UX Design Cape Town & South Africa | Conextsol',
+    metaDescription: 'Expert UI/UX design services in Cape Town & South Africa. We create beautiful, intuitive, and high-converting digital interfaces.',
     faq: [
       {
         question: 'What is the difference between UI and UX?',
@@ -165,22 +165,22 @@ export const services = [
   },
   {
     slug: 'ecommerce-development',
-    title: 'E-commerce Website Development South Africa',
+    title: 'E-commerce Website Development Cape Town',
     shortTitle: 'E-commerce',
     description: 'High-performance online stores built for scale, integrated with local South African payment gateways.',
-    longDescription: 'Selling online requires a platform that is secure, fast, and frictionless. We build robust e-commerce solutions tailored for the South African market. From seamless integrations with PayFast, Peach Payments, and local couriers to optimized checkout flows that reduce cart abandonment. Whether you need a Shopify setup or a custom headless commerce architecture, we build digital storefronts that turn browsers into loyal buyers.',
+    longDescription: 'Conextsol builds high-performance e-commerce websites in Cape Town and South Africa tailored for growing retail and DTC brands. Our e-commerce development integrates seamlessly with local payment gateways like PayFast, Peach Payments, Yoco, and Ozow as well as local courier APIs. Whether deploying headless commerce architectures or Shopify builds, we engineer online stores optimized for fast loading and low cart abandonment.',
     icon: 'ShoppingCart',
     features: [
       'Custom E-commerce Architecture',
-      'Local Payment Gateway Integration (PayFast, Yoco, etc.)',
+      'Local Payment Gateway Integration (PayFast, Yoco, Peach Payments)',
       'Inventory Management & ERP Sync',
       'Optimized Checkout Flows',
       'Mobile-optimized Shopping Experience',
       'Advanced Product Filtering & Search'
     ],
-    targetAudience: 'Retailers, wholesalers, and DTC brands looking to scale their online sales securely.',
-    metaTitle: 'E-commerce Development South Africa | Conextsol',
-    metaDescription: 'High-converting e-commerce website development in South Africa. Integrated with PayFast, optimized for sales.',
+    targetAudience: 'Cape Town and South African retailers, wholesalers, and DTC brands looking to scale their online sales securely.',
+    metaTitle: 'E-commerce Development Cape Town & SA | Conextsol',
+    metaDescription: 'High-converting e-commerce website development in Cape Town & South Africa. Integrated with PayFast, Yoco & local couriers.',
     faq: [
       {
         question: 'Which e-commerce platforms do you use?',
@@ -206,10 +206,10 @@ export const services = [
   },
   {
     slug: 'website-maintenance',
-    title: 'Website Maintenance & Optimization South Africa',
+    title: 'Website Maintenance & Optimization Cape Town',
     shortTitle: 'Maintenance',
     description: 'Ongoing support, security updates, and performance optimization to keep your digital assets running perfectly.',
-    longDescription: 'A website is not a one-off project; it requires constant care to perform optimally. Our maintenance packages ensure your site is always secure, up-to-date, and fast. We handle everything from plugin updates and daily backups to continuous SEO monitoring and performance tweaks. Let us handle the technical heavy lifting so you can focus entirely on running your business, knowing your digital presence is in expert hands.',
+    longDescription: 'Conextsol provides website maintenance and technical optimization services in Cape Town and across South Africa to protect and preserve your digital investment. Our managed maintenance packages cover daily automated backups, 24/7 uptime monitoring, security patching, and continuous page speed tweaks. We handle ongoing technical updates so business owners can focus entirely on growth with full peace of mind.',
     icon: 'Wrench',
     features: [
       '24/7 Uptime Monitoring',
@@ -219,9 +219,9 @@ export const services = [
       'Monthly Analytics Reporting',
       'Priority Technical Support'
     ],
-    targetAudience: 'Business owners who want peace of mind and guarantee their website remains secure and fast long-term.',
-    metaTitle: 'Website Maintenance South Africa | Conextsol',
-    metaDescription: 'Professional website maintenance, security, and optimization services for South African businesses.',
+    targetAudience: 'Business owners in Cape Town and nationwide who want guaranteed website security, performance, and long-term uptime.',
+    metaTitle: 'Website Maintenance Cape Town & South Africa | Conextsol',
+    metaDescription: 'Professional website maintenance, security, and optimization services for Cape Town and South African businesses.',
     faq: [
       {
         question: 'Why do I need website maintenance?',
@@ -242,6 +242,88 @@ export const services = [
       {
         question: 'Can you maintain a site you didn’t build?',
         answer: 'Yes, subject to a technical audit. We review your existing codebase to ensure it meets our standards before taking over maintenance.'
+      }
+    ]
+  },
+  {
+    slug: 'google-ads-management',
+    title: 'Google Ads Management Agency in Cape Town & South Africa',
+    shortTitle: 'Google Ads',
+    description: 'High-ROI, in-house Google Ads campaign setup and management designed to generate qualified business leads.',
+    longDescription: 'Conextsol is an in-house Google Ads management agency in Cape Town serving businesses across South Africa seeking measurable pay-per-click (PPC) lead generation. We design, launch, and optimize high-converting Google Search, Display, and Performance Max campaigns without outsourcing your account to third parties. From strategic keyword research and persuasive ad copy to dedicated landing page optimization and transparent ROI reporting, we turn search intent into qualified business inquiries.',
+    icon: 'TrendingUp',
+    features: [
+      'In-house Google Search & Display Campaign Management',
+      'Conversion Tracking & Goal Setup',
+      'Keyword Research & Negative Keyword Strategy',
+      'High-Converting Ad Copywriting',
+      'Landing Page Optimization',
+      'Monthly Transparent ROAS & Lead Reporting'
+    ],
+    targetAudience: 'Cape Town and South African SMEs, professional service providers, and B2B companies seeking predictable lead generation via Google Ads.',
+    metaTitle: 'Google Ads Management Cape Town & South Africa | Conextsol',
+    metaDescription: 'In-house Google Ads agency in Cape Town. We set up, manage, and optimize PPC search campaigns to drive qualified South African business leads.',
+    faq: [
+      {
+        question: 'Do you manage Google Ads in-house or outsource it?',
+        answer: 'We manage all Google Ads campaigns entirely in-house. Our internal team handles campaign setup, ad copy, keyword targeting, bidding strategies, and performance reporting.'
+      },
+      {
+        question: 'How quickly can we expect leads from Google Ads?',
+        answer: 'Unlike organic SEO which takes time to build, Google Ads can generate targeted traffic and leads within days of launching your campaign.'
+      },
+      {
+        question: 'What budget is required for Google Ads in South Africa?',
+        answer: 'Ad spend varies depending on your industry and competition. We generally recommend starting with an ad spend budget of at least R5,000 to R15,000 per month for local search campaigns.'
+      },
+      {
+        question: 'Do I own the Google Ads account?',
+        answer: 'Yes, 100%. We set up or manage campaigns directly inside your own Google Ads account, ensuring complete transparency and data ownership.'
+      },
+      {
+        question: 'How do you measure Google Ads success?',
+        answer: 'We track actual conversions—such as form submissions, phone calls, and WhatsApp inquiries—not just clicks or impressions, giving you clear visibility on cost-per-lead.'
+      }
+    ]
+  },
+  {
+    slug: 'hosting',
+    title: 'Managed Website Hosting & Infrastructure Services',
+    shortTitle: 'Managed Hosting',
+    description: 'Fast, secure, and fully managed cloud hosting backed by enterprise third-party infrastructure partners.',
+    longDescription: 'Conextsol delivers managed website hosting and cloud infrastructure services for South African businesses requiring fast page load times and uninterrupted uptime. We resell and manage hosting built on top of tier-1 global and local third-party infrastructure partners. Our engineering team manages server configurations, SSL certificates, automated daily backups, DNS routing, and 24/7 security monitoring on your behalf.',
+    icon: 'Server',
+    features: [
+      'Managed Cloud Infrastructure via Tier-1 Partners',
+      'Free SSL Certificate Setup & Auto-Renewal',
+      'Automated Daily Backups & Disaster Recovery',
+      'Global CDN & Local Edge Caching',
+      '99.9% Uptime Guarantee & 24/7 Monitoring',
+      'POPIA-Compliant Security & Firewall Protection'
+    ],
+    targetAudience: 'Businesses in Cape Town and nationwide wanting secure, high-performance hosting managed by web development experts.',
+    metaTitle: 'Managed Website Hosting Cape Town & South Africa | Conextsol',
+    metaDescription: 'Reliable managed website hosting in South Africa. Secure cloud infrastructure managed by experts with daily backups, SSL, and 24/7 monitoring.',
+    faq: [
+      {
+        question: 'Do you own the data center infrastructure?',
+        answer: 'No. We resell and manage hosting using enterprise third-party infrastructure partners (such as AWS, Cloudflare, and specialized cloud hosts). We manage the server setup, security, updates, and optimization on your behalf.'
+      },
+      {
+        question: 'Is SSL included with website hosting?',
+        answer: 'Yes, all our managed hosting packages include free SSL certificates, configured and auto-renewed automatically.'
+      },
+      {
+        question: 'How often are backups performed?',
+        answer: 'We perform automated daily backups with offsite retention, allowing rapid restoration in the unlikely event of data loss.'
+      },
+      {
+        question: 'Can you migrate our existing website hosting?',
+        answer: 'Yes, we handle seamless website migrations from your current host with zero downtime.'
+      },
+      {
+        question: 'What is included in managed hosting?',
+        answer: 'Managed hosting covers server setup, DNS configuration, security firewall maintenance, performance caching, daily backups, and ongoing technical support.'
       }
     ]
   }

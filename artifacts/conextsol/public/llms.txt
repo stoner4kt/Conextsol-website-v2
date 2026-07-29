@@ -1,22 +1,26 @@
-# Conextsol — Web Design & Development South Africa
-> A results-driven web design, web development, and custom software studio serving South African businesses.
+# Conextsol — Web Design & Development Cape Town & South Africa
+> Cape Town's premier results-driven web design, web development, custom software development, Google Ads management, and managed website hosting studio serving South African businesses nationwide.
 
 ## About
-Conextsol builds fast, beautiful, high-converting websites and custom software for South African SMEs, startups, and professional service firms. Based in South Africa, serving clients in Johannesburg, Cape Town, Durban, Pretoria, and nationwide.
+Conextsol is headquartered in Cape Town, South Africa, serving clients in Cape Town, Johannesburg, Durban, Pretoria, and across South Africa. We build fast, beautiful, high-converting websites and custom software applications for South African SMEs, startups, and professional service firms.
 
-## Services
-- Website Design: /services/website-design
-- Web Development: /services/web-development
-- Custom Software Development: /services/custom-software-development
-- UI/UX Design: /services/ui-ux-design
-- E-commerce Development: /services/ecommerce-development
-- Website Maintenance & Optimization: /services/website-maintenance
+## Services Overview
+- Website Design (/services/website-design): Beautiful, mobile-first, high-converting websites designed to establish your brand and drive actual business results in Cape Town and across South Africa.
+- Web Development (/services/web-development): Robust, scalable, sub-2-second front-end and back-end web application development using modern stacks (React, Next.js, Node.js).
+- Custom Software Development (/services/custom-software-development): Bespoke web applications, CRMs, client portals, and internal tools engineered specifically to automate business workflows.
+- UI/UX Design (/services/ui-ux-design): Data-driven user experience and interface design created in Figma to maximize user conversion and satisfaction.
+- E-commerce Development (/services/ecommerce-development): High-performance online stores integrated with local South African payment gateways (PayFast, Peach Payments, Yoco) and couriers.
+- Website Maintenance & Optimization (/services/website-maintenance): 24/7 uptime monitoring, daily backups, security patching, and ongoing performance optimization.
+- Google Ads Management (/services/google-ads-management): In-house Google Search and Display campaign setup, PPC keyword targeting, and conversion tracking for South African businesses.
+- Managed Website Hosting (/services/hosting): Secure cloud hosting resold via tier-1 third-party infrastructure partners, fully managed by Conextsol with free SSL and 24/7 monitoring.
 
 ## Key Pages
 - Home: /
-- Services: /services
+- Services Hub: /services
 - Portfolio: /portfolio
-- About: /about
+- About Us: /about
 - Blog: /blog
 - FAQ: /faq
 - Contact: /contact
+- Privacy Policy: /privacy-policy
+- Terms of Service: /terms-of-service

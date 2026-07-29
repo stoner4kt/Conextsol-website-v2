@@ -2,7 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { CTABanner } from '@/components/sections/CTABanner';
 import { services } from '@/data/services';
-import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, ArrowRight } from 'lucide-react';
+import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, TrendingUp, Server, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 
@@ -12,15 +12,18 @@ const iconMap: Record<string, any> = {
   TerminalSquare: TerminalSquare,
   Figma: Figma,
   ShoppingCart: ShoppingCart,
-  Wrench: Wrench
+  Wrench: Wrench,
+  TrendingUp: TrendingUp,
+  Server: Server
 };
 
 export default function ServicesHub() {
   return (
     <Layout>
       <SEOHead 
-        title="Professional Web Design & Development Services"
-        description="Explore Conextsol's full-suite of digital services including web design, custom software development, e-commerce, and UI/UX design in South Africa."
+        title="Web Design, Development, Google Ads & Managed Hosting Services"
+        description="Explore Conextsol's full suite of digital services in Cape Town & South Africa: web design, custom software development, Google Ads management, e-commerce, and managed cloud hosting."
+        canonicalUrl="/services"
       />
       
       {/* Header */}
@@ -31,7 +34,7 @@ export default function ServicesHub() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
           >
-            Professional Web Design & Development Services
+            Digital Services in Cape Town & South Africa
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +42,7 @@ export default function ServicesHub() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground"
           >
-            We provide end-to-end digital solutions for South African businesses. Whether you need a high-converting marketing website or a complex bespoke software application, we have the technical expertise to deliver.
+            We provide end-to-end digital solutions for South African businesses. Whether you need a high-converting website, bespoke software, in-house Google Ads management, or managed cloud hosting, we have the technical expertise to deliver.
           </motion.p>
         </div>
       </section>
@@ -56,7 +59,7 @@ export default function ServicesHub() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ delay: idx * 0.08 }}
                   className="bg-card border border-border rounded-3xl p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-8">

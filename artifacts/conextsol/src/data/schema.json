@@ -1,16 +1,58 @@
 {
+  "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
   "name": "Conextsol",
   "url": "https://conextsol.co.za",
   "logo": "https://conextsol.co.za/logo.png",
-  "description": "South Africa's results-driven web design and development studio",
+  "description": "Cape Town's premier results-driven web design, web development, custom software, and Google Ads studio serving businesses across South Africa.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Cape Town",
+    "addressRegion": "Western Cape",
     "addressCountry": "ZA"
   },
-  "areaServed": ["Johannesburg", "Cape Town", "Durban", "Pretoria", "South Africa"],
-  "serviceType": ["Web Design", "Web Development", "Custom Software Development", "UI/UX Design", "E-commerce Development"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-33.9249",
+    "longitude": "18.4241"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Cape Town",
+      "sameAs": "https://en.wikipedia.org/wiki/Cape_Town",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-33.9249",
+        "longitude": "18.4241"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Johannesburg"
+    },
+    {
+      "@type": "City",
+      "name": "Durban"
+    },
+    {
+      "@type": "City",
+      "name": "Pretoria"
+    },
+    {
+      "@type": "Country",
+      "name": "South Africa"
+    }
+  ],
+  "serviceType": [
+    "Web Design",
+    "Web Development",
+    "Custom Software Development",
+    "UI/UX Design",
+    "E-commerce Development",
+    "Google Ads Management",
+    "Managed Website Hosting & Infrastructure"
+  ],
   "telephone": "+27 66 119 2498",
   "email": "info@conextsol.co.za"
 }

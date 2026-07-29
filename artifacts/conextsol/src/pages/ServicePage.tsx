@@ -5,7 +5,7 @@ import { CTABanner } from '@/components/sections/CTABanner';
 import { services } from '@/data/services';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, TrendingUp, Server, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import NotFound from './not-found';
 
@@ -15,7 +15,9 @@ const iconMap: Record<string, any> = {
   TerminalSquare: TerminalSquare,
   Figma: Figma,
   ShoppingCart: ShoppingCart,
-  Wrench: Wrench
+  Wrench: Wrench,
+  TrendingUp: TrendingUp,
+  Server: Server
 };
 
 export default function ServicePage() {
@@ -28,11 +30,48 @@ export default function ServicePage() {
 
   const Icon = iconMap[service.icon] || LayoutIcon;
 
+  // Generate Service & FAQPage Schema.org structured data
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "serviceType": service.shortTitle,
+    "description": service.description,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Conextsol",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cape Town",
+        "addressCountry": "ZA"
+      }
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Cape Town" },
+      { "@type": "Country", "name": "South Africa" }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faq.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <Layout>
       <SEOHead 
         title={service.metaTitle}
         description={service.metaDescription}
+        canonicalUrl={`/services/${service.slug}`}
+        schema={[serviceSchema, faqSchema]}
       />
       
       {/* Hero */}
@@ -102,8 +141,8 @@ export default function ServicePage() {
                   {[
                     { title: "Discovery", desc: "Understanding your exact needs and business goals." },
                     { title: "Strategy & Design", desc: "Crafting the blueprint and visual approach." },
-                    { title: "Development", desc: "Building out the solution with modern technologies." },
-                    { title: "Launch & Support", desc: "Deploying safely and providing ongoing maintenance." }
+                    { title: "Development & Setup", desc: "Building out the solution with modern technologies and rigorous testing." },
+                    { title: "Launch & Support", desc: "Deploying safely and providing ongoing optimization and maintenance." }
                   ].map((step, i) => (
                     <div key={i} className="flex gap-6">
                       <div className="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary font-bold text-lg rounded-full flex items-center justify-center">

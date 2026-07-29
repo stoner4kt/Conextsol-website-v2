@@ -7,7 +7,7 @@ interface SEOHeadProps {
   canonicalUrl?: string;
   type?: 'website' | 'article' | 'product';
   image?: string;
-  schema?: object;
+  schema?: object | object[];
 }
 
 export function SEOHead({
@@ -21,8 +21,9 @@ export function SEOHead({
   const fullTitle = `${title} | Conextsol`;
   const url = canonicalUrl ? `https://conextsol.co.za${canonicalUrl}` : 'https://conextsol.co.za';
 
-  // Always include the organization schema, plus any specific schema passed
-  const jsonLd = schema ? [organizationSchema, schema] : [organizationSchema];
+  // Include Organization schema plus any specific schema passed
+  const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+  const jsonLd = [organizationSchema, ...extraSchemas];
 
   return (
     <Helmet>

@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrench, TrendingUp, Server, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { SEOHead } from '@/components/seo/SEOHead';
@@ -21,15 +21,18 @@ const iconMap: Record<string, any> = {
   TerminalSquare: TerminalSquare,
   Figma: Figma,
   ShoppingCart: ShoppingCart,
-  Wrench: Wrench
+  Wrench: Wrench,
+  TrendingUp: TrendingUp,
+  Server: Server
 };
 
 export default function Home() {
   return (
     <Layout>
       <SEOHead
-        title="South Africa's Results-Driven Web Design & Development Studio"
-        description="Conextsol builds fast, beautiful, high-converting websites and software that grow South African businesses. Based in Cape Town, serving clients nationwide."
+        title="Cape Town's Results-Driven Web Design & Development Studio"
+        description="Conextsol builds fast, beautiful, high-converting websites, custom software, and Google Ads campaigns. Based in Cape Town, serving clients across South Africa."
+        canonicalUrl="/"
       />
 
       {/* Hero Section */}

@@ -6,11 +6,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { motion } from 'framer-motion';
 
 export default function FAQ() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqCategories.flatMap(cat => 
+      cat.items.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    )
+  };
+
   return (
     <Layout>
       <SEOHead 
-        title="Frequently Asked Questions | Conextsol"
-        description="Find answers to common questions about our web design, custom software development, pricing, and process."
+        title="Frequently Asked Questions | Conextsol Cape Town"
+        description="Find answers to common questions about Conextsol's web design, custom software development, Google Ads, managed hosting, pricing, and project timelines."
+        canonicalUrl="/faq"
+        schema={faqSchema}
       />
       
       <section className="pt-24 pb-16 bg-muted/30 border-b border-border">
@@ -28,7 +45,7 @@ export default function FAQ() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground"
           >
-            Everything you need to know about working with us.
+            Everything you need to know about working with Conextsol in Cape Town & South Africa.
           </motion.p>
         </div>
       </section>
