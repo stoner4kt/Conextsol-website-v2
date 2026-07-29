@@ -21,7 +21,7 @@ function WhatsAppIcon({ size = 24 }: { size?: number }) {
   );
 }
 
-const WORKER_URL = import.meta.env.VITE_WORKER_URL || "YOUR_WORKER_URL";
+const WORKER_URL = import.meta.env.VITE_WORKER_URL || "https://contact-form-worker.reeqieric41.workers.dev";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name is required"),
