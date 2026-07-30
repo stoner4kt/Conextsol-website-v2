@@ -61,24 +61,49 @@ export function Header() {
             </Link>
             
             {/* Services Dropdown */}
-            <div className="relative group">
+            <div 
+              className="relative group"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
               <button 
-                className={cn("flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors py-8", location.startsWith('/services') && "text-primary")}
+                type="button"
+                className={cn(
+                  "flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors py-8", 
+                  (location.startsWith('/services') || servicesOpen) && "text-primary"
+                )}
                 onClick={() => setServicesOpen(!servicesOpen)}
+                aria-expanded={servicesOpen}
               >
-                Services <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                Services <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", servicesOpen ? "rotate-180" : "group-hover:rotate-180")} />
               </button>
               
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-card border border-border shadow-xl rounded-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-x-8 gap-y-6">
+              <div 
+                className={cn(
+                  "absolute top-full left-1/2 -translate-x-1/2 w-[600px] z-50 bg-card border border-border shadow-xl rounded-2xl p-6 transition-all duration-200 grid grid-cols-2 gap-x-8 gap-y-6 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:bg-transparent",
+                  servicesOpen 
+                    ? "opacity-100 visible pointer-events-auto" 
+                    : "opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
+                )}
+              >
                 {services.map((service) => (
-                  <Link key={service.slug} href={`/services/${service.slug}`} className="flex flex-col gap-1 group/item">
+                  <Link 
+                    key={service.slug} 
+                    href={`/services/${service.slug}`} 
+                    onClick={() => setServicesOpen(false)}
+                    className="flex flex-col gap-1 group/item p-1.5 -m-1.5 rounded-lg hover:bg-muted/40 transition-colors"
+                  >
                     <span className="text-sm font-bold text-foreground group-hover/item:text-primary transition-colors">{service.shortTitle}</span>
                     <span className="text-xs text-muted-foreground line-clamp-1">{service.description}</span>
                   </Link>
                 ))}
                 <div className="col-span-2 pt-4 mt-2 border-t border-border flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Not sure what you need?</span>
-                  <Link href="/services" className="text-sm font-bold text-primary hover:underline">
+                  <Link 
+                    href="/services" 
+                    onClick={() => setServicesOpen(false)}
+                    className="text-sm font-bold text-primary hover:underline"
+                  >
                     View all services →
                   </Link>
                 </div>
