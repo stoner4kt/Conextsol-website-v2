@@ -40,7 +40,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl"
             >
-              <img src={aboutImg} alt="Conextsol Team Concept" className="w-full h-full object-cover" />
+              <img src={aboutImg} alt="Conextsol Cape Town web design and software team planning digital projects" width="1200" height="800" loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
             </motion.div>
           </div>

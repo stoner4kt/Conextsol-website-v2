@@ -40,7 +40,9 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
-            alt="Conextsol Hero"
+            alt="Conextsol web design and custom software studio, Cape Town, South Africa"
+            width="1920"
+            height="1080"
             className="w-full h-full object-cover opacity-15 dark:opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background to-background" />

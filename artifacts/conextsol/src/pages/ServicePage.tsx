@@ -9,6 +9,11 @@ import { Layout as LayoutIcon, Code2, TerminalSquare, Figma, ShoppingCart, Wrenc
 import { motion } from 'framer-motion';
 import NotFound from './not-found';
 
+function parseZarPrice(text: string) {
+  const match = text.match(/R\s?([0-9,]+)/);
+  return match ? match[1].replace(/,/g, '') : undefined;
+}
+
 const iconMap: Record<string, any> = {
   Layout: LayoutIcon,
   Code2: Code2,
@@ -29,6 +34,7 @@ export default function ServicePage() {
   }
 
   const Icon = iconMap[service.icon] || LayoutIcon;
+  const offerPrice = parseZarPrice(service.faq.map((item) => `${item.question} ${item.answer}`).join(' '));
 
   // Generate Service & FAQPage Schema.org structured data
   const serviceSchema = {
@@ -48,8 +54,18 @@ export default function ServicePage() {
     },
     "areaServed": [
       { "@type": "City", "name": "Cape Town" },
+      { "@type": "City", "name": "Johannesburg" },
+      { "@type": "City", "name": "Durban" },
+      { "@type": "City", "name": "Pretoria" },
       { "@type": "Country", "name": "South Africa" }
-    ]
+    ],
+    ...(offerPrice ? {
+      "offers": {
+        "@type": "Offer",
+        "price": offerPrice,
+        "priceCurrency": "ZAR"
+      }
+    } : {})
   };
 
   const faqSchema = {

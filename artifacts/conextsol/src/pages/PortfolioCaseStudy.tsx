@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { CTABanner } from '@/components/sections/CTABanner';
+import { RelatedServices } from '@/components/sections/RelatedServices';
 import { portfolio } from '@/data/portfolio';
 import NotFound from '@/pages/not-found';
 
@@ -41,7 +42,7 @@ export default function PortfolioCaseStudy() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }} className="overflow-hidden rounded-3xl border border-border shadow-2xl">
-              <img src={project.imageUrl} alt={`${project.clientType} case study`} className="h-full w-full object-cover" />
+              <img src={project.imageUrl} alt={`${project.clientType} ${project.industry} website and software case study by Conextsol`} width="1200" height="800" className="h-full w-full object-cover" />
             </motion.div>
           </div>
         </div>
@@ -72,6 +73,8 @@ export default function PortfolioCaseStudy() {
           </div>
         </div>
       </section>
+
+      <RelatedServices slugs={(project as any).relatedServiceSlugs} />
 
       <CTABanner title="Ready to build a project like this?" />
     </Layout>

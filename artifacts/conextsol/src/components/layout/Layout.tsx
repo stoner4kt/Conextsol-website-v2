@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { trackWhatsAppClick } from '@/lib/analytics';
 function WhatsAppIcon({ size = 30 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -24,11 +25,12 @@ export function Layout({ children }: LayoutProps) {
       
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/27820000000?text=Hi%20Conextsol%2C%20I%27m%20interested%20in%20a%20website%20quote" 
+        href="https://wa.me/27661192498?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20website."
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform hover:shadow-xl group"
         aria-label="Chat with us on WhatsApp"
+        onClick={() => trackWhatsAppClick('floating_button')}
       >
         <WhatsAppIcon size={30} />
         {/* Pulse effect */}
