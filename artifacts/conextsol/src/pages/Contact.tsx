@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MapPin, Phone, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { trackEmailClick, trackFormSubmit, trackPhoneClick, trackWhatsAppClick } from '@/lib/analytics';
 
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
@@ -76,6 +77,7 @@ export default function Contact() {
           title: "Thank you!",
           description: successMsg,
         });
+        trackFormSubmit();
         form.reset();
       } else {
         throw new Error(data.error || "Failed to send message");
@@ -135,7 +137,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground font-medium mb-1">Email Us</div>
-                      <a href="mailto:info@conextsol.co.za" className="text-foreground font-bold hover:text-primary transition-colors text-lg">
+                      <a href="mailto:info@conextsol.co.za" onClick={() => trackEmailClick('contact_page')} className="text-foreground font-bold hover:text-primary transition-colors text-lg">
                         info@conextsol.co.za
                       </a>
                     </div>
@@ -147,7 +149,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground font-medium mb-1">Call Us</div>
-                      <a href="tel:+27661192498" className="text-foreground font-bold hover:text-primary transition-colors text-lg">
+                      <a href="tel:+27661192498" onClick={() => trackPhoneClick('contact_page')} className="text-foreground font-bold hover:text-primary transition-colors text-lg">
                         066 119 2498
                       </a>
                     </div>
@@ -170,9 +172,10 @@ export default function Contact() {
                 <div className="mt-12 pt-8 border-t border-primary/10">
                   <h4 className="text-lg font-bold text-foreground mb-4">Need a faster response?</h4>
                   <a
-                    href="https://wa.me/27661192498?text=Hi%20Conextsol%2C%20I%27m%20interested%20in%20a%20website%20quote"
+                    href="https://wa.me/27661192498?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20website."
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('contact_page')}
                     className="flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-xl transition-colors shadow-lg"
                   >
                     <WhatsAppIcon size={24} />

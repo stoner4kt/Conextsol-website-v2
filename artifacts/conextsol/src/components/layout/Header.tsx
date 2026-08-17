@@ -38,6 +38,8 @@ export function Header() {
         <img
           src={logoImg}
           alt=""
+          width="320"
+          height="80"
           className="absolute right-4 top-1/2 h-24 w-auto -translate-y-1/2 opacity-[0.07] blur-[0.2px] sm:right-10 sm:h-28 lg:right-20 lg:h-32"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/45" />
@@ -49,8 +51,8 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2 group z-50 relative">
             <img
               src={logoImg}
-              alt="Conextsol"
-              className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+              alt="Conextsol web design and software development studio logo"
+              width="160" height="40" className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </Link>
 

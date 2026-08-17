@@ -2,6 +2,7 @@ import { useParams, Link } from 'wouter';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { CTABanner } from '@/components/sections/CTABanner';
+import { RelatedServices } from '@/components/sections/RelatedServices';
 import { blogPosts } from '@/data/blog';
 import { Calendar, Clock, ArrowLeft, RefreshCw } from 'lucide-react';
 import NotFound from './not-found';
@@ -17,7 +18,7 @@ export default function BlogPost() {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
     "datePublished": post.publishedIsoDate || "2026-03-01",
@@ -35,6 +36,7 @@ export default function BlogPost() {
         "url": "https://conextsol.co.za/logo.png"
       }
     },
+    "image": post.image || "https://conextsol.co.za/og-image.jpg",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://conextsol.co.za/blog/${post.slug}`
@@ -81,7 +83,7 @@ export default function BlogPost() {
               animate={{ opacity: 1, y: 0 }}
               className="aspect-video rounded-3xl overflow-hidden mb-12 shadow-xl"
             >
-              <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+              <img src={post.image} alt={`${post.title} article image for South African business owners`} width="1200" height="675" className="w-full h-full object-cover" />
             </motion.div>
           )}
 
@@ -93,6 +95,8 @@ export default function BlogPost() {
 
         </div>
       </article>
+
+      <RelatedServices slugs={(post as any).relatedServiceSlugs} />
 
       <CTABanner title="Need a digital partner?" subtitle="Let's discuss how we can help implement these strategies for your business." />
     </Layout>

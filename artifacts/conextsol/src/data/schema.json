@@ -1,6 +1,9 @@
 {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": [
+    "Organization",
+    "LocalBusiness"
+  ],
   "name": "Conextsol",
   "url": "https://conextsol.co.za",
   "logo": "https://conextsol.co.za/logo.png",
@@ -53,6 +56,28 @@
     "Google Ads Management",
     "Managed Website Hosting & Infrastructure"
   ],
-  "telephone": "+27 66 119 2498",
-  "email": "info@conextsol.co.za"
+  "telephone": "+27661192498",
+  "email": "info@conextsol.co.za",
+  "image": "https://conextsol.co.za/og-image.jpg",
+  "priceRange": "R R R",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/conextsol",
+    "https://www.linkedin.com/company/conextsol",
+    "https://www.instagram.com/conextsol",
+    "https://g.page/r/conextsol"
+  ]
 }

@@ -25,7 +25,10 @@ export function CaseStudyCard({ id, clientType, industry, services, keyMetric, d
       <div className="relative aspect-[3/2] overflow-hidden bg-muted">
         <img 
           src={imageUrl} 
-          alt={`${clientType} - ${industry} project`}
+          alt={`${clientType} ${industry} website and software project by Conextsol`}
+          width="900"
+          height="600"
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4">

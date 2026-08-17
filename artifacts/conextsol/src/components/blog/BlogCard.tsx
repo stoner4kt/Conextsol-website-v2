@@ -26,7 +26,10 @@ export function BlogCard({ slug, title, excerpt, date, readTime, category, image
         {image ? (
           <img 
             src={image} 
-            alt={title}
+            alt={`${title} article preview for South African businesses`}
+            width="800"
+            height="450"
+            loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (

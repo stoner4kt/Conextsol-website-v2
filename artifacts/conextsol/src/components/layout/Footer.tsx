@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Facebook, Instagram } from 'lucide-react';
 import logoImg from '@assets/logo.png';
+import { trackEmailClick, trackPhoneClick } from '@/lib/analytics';
 
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
   return (
@@ -21,7 +22,9 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <img
                 src={logoImg}
-                alt="Conextsol"
+                alt="Conextsol web design and software development studio logo"
+                width="144"
+                height="36"
                 className="h-9 w-auto object-contain"
               />
             </Link>
@@ -81,11 +84,11 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-emerald-50/85">
               <li>
                 <strong>Email:</strong><br />
-                <a href="mailto:info@conextsol.co.za" className="hover:text-white transition-colors">info@conextsol.co.za</a>
+                <a href="mailto:info@conextsol.co.za" onClick={() => trackEmailClick('footer')} className="hover:text-white transition-colors">info@conextsol.co.za</a>
               </li>
               <li>
                 <strong>Phone:</strong><br />
-                <a href="tel:+27661192498" className="hover:text-white transition-colors">066 119 2498</a>
+                <a href="tel:+27661192498" onClick={() => trackPhoneClick('footer')} className="hover:text-white transition-colors">066 119 2498</a>
               </li>
               <li>
                 <strong>Office:</strong><br />

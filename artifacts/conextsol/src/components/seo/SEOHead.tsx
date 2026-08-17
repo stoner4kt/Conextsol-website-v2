@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import organizationSchema from '@/data/schema.json';
+import { createBreadcrumbSchema } from '@/lib/breadcrumbSchema';
 
 interface SEOHeadProps {
   title: string;
@@ -18,12 +19,14 @@ export function SEOHead({
   image = 'https://conextsol.co.za/og-image.jpg',
   schema
 }: SEOHeadProps) {
-  const fullTitle = `${title} | Conextsol`;
+  const fullTitle = title.includes('Conextsol') ? title : `${title} | Conextsol`;
+  const path = canonicalUrl || '/';
   const url = canonicalUrl ? `https://conextsol.co.za${canonicalUrl}` : 'https://conextsol.co.za';
+  const breadcrumbSchema = createBreadcrumbSchema(path);
 
-  // Include Organization schema plus any specific schema passed
+  // Include Organization schema plus breadcrumbs and any specific schema passed
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
-  const jsonLd = [organizationSchema, ...extraSchemas];
+  const jsonLd = [organizationSchema, breadcrumbSchema, ...extraSchemas];
 
   return (
     <Helmet>

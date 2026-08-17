@@ -33,7 +33,8 @@ const routesToPrerender = [
   '/faq',
   '/contact',
   '/privacy-policy',
-  '/terms-of-service'
+  '/terms-of-service',
+  '/404'
 ];
 
 async function prerender() {
@@ -47,7 +48,7 @@ async function prerender() {
 
   // Strip default fallback meta tags from the template so helmet tags replace them completely
   const cleanTemplate = rawTemplate
-    .replace(/<title>[^<]*<\/title>/i, '')
+    .replace(/<title>[^<]*<\/title>/gi, '')
     .replace(/<meta\s+name="description"[^>]*>/i, '')
     .replace(/<meta\s+property="og:[^"]*"[^>]*>/gi, '')
     .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gi, '');
@@ -63,14 +64,22 @@ async function prerender() {
   console.log(`Starting SSG prerender for ${routesToPrerender.length} routes...`);
 
   for (const url of routesToPrerender) {
-    const { html, helmet } = render(url);
+    let { html, helmet } = render(url);
+    const renderedHeadTags = [];
+    html = html.replace(/<(title|meta|link)(?:\s[^>]*)?>[^<]*<\/title>|<(meta|link)(?:\s[^>]*)?\/>|<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, (tag) => {
+      renderedHeadTags.push(tag);
+      return "";
+    });
 
-    const titleTag = helmet?.title?.toString() || '<title>Conextsol | Web Design & Development Cape Town</title>';
     const metaTags = helmet?.meta?.toString() || '';
+    const titleMatch = metaTags.match(/<meta[^>]+property=\"og:title\"[^>]+content=\"([^\"]+)\"[^>]*>/);
+    const hasRenderedTitle = renderedHeadTags.some((tag) => tag.toLowerCase().startsWith('<title'));
+    const renderedTitle = helmet?.title?.toString() || '';
+    const titleTag = hasRenderedTitle ? '' : (titleMatch ? `<title>${titleMatch[1]}</title>` : (renderedTitle || '<title>Conextsol | Web Design & Development Cape Town</title>'));
     const linkTags = helmet?.link?.toString() || '';
     const scriptTags = helmet?.script?.toString() || '';
 
-    const headContent = [titleTag, metaTags, linkTags, scriptTags].filter(Boolean).join('\n    ');
+    const headContent = [...renderedHeadTags, titleTag, metaTags, linkTags, scriptTags].filter(Boolean).join('\n    ');
 
     let pageHtml = cleanTemplate.replace('</head>', `    ${headContent}\n  </head>`);
 
@@ -78,9 +87,11 @@ async function prerender() {
       pageHtml = pageHtml.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
     }
 
-    const filePath = url === '/' 
+    const filePath = url === '/'
       ? path.resolve(root, 'dist/public/index.html')
-      : path.resolve(root, `dist/public${url}/index.html`);
+      : url === '/404'
+        ? path.resolve(root, 'dist/public/404.html')
+        : path.resolve(root, `dist/public${url}/index.html`);
 
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
