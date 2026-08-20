@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -62,70 +62,70 @@
 }
 
 :root {
-  --button-outline: rgba(0, 0, 0, 0.1);
-  --badge-outline: rgba(0, 0, 0, 0.05);
-  --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0, 0, 0, 0.03);
-  --elevate-2: rgba(0, 0, 0, 0.08);
+  --button-outline: rgba(28, 25, 23, 0.16);
+  --badge-outline: rgba(28, 25, 23, 0.08);
+  --opaque-button-border-intensity: -10;
+  --elevate-1: rgba(255, 255, 255, 0.28);
+  --elevate-2: rgba(251, 146, 60, 0.18);
 
-  --background: 213 78% 7%;
-  --foreground: 186 33% 94%;
-  --border: 184 48% 22%;
+  --background: 36 100% 96%;
+  --foreground: 24 20% 12%;
+  --border: 24 26% 82%;
 
-  --card: 197 72% 10%;
-  --card-foreground: 186 33% 94%;
-  --card-border: 184 48% 22%;
+  --card: 39 100% 98%;
+  --card-foreground: 24 20% 12%;
+  --card-border: 24 26% 82%;
 
-  --sidebar: 213 78% 7%;
-  --sidebar-foreground: 0 0% 92%;
-  --sidebar-border: 184 48% 22%;
-  --sidebar-primary: 160 84% 39%;
+  --sidebar: 36 100% 96%;
+  --sidebar-foreground: 24 20% 12%;
+  --sidebar-border: 24 26% 82%;
+  --sidebar-primary: 18 95% 56%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 190 67% 13%;
-  --sidebar-accent-foreground: 0 0% 92%;
-  --sidebar-ring: 160 84% 39%;
+  --sidebar-accent: 50 96% 57%;
+  --sidebar-accent-foreground: 24 20% 12%;
+  --sidebar-ring: 18 95% 56%;
 
-  --popover: 197 72% 10%;
-  --popover-foreground: 0 0% 92%;
-  --popover-border: 184 48% 22%;
+  --popover: 39 100% 98%;
+  --popover-foreground: 24 20% 12%;
+  --popover-border: 24 26% 82%;
 
-  --primary: 160 84% 39%;
+  --primary: 18 95% 56%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 178 72% 38%;
+  --secondary: 174 70% 41%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 190 67% 13%;
-  --muted-foreground: 185 22% 72%;
+  --muted: 35 42% 90%;
+  --muted-foreground: 24 12% 38%;
 
-  --accent: 160 84% 39%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 50 96% 57%;
+  --accent-foreground: 24 20% 12%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 190 45% 20%;
-  --ring: 160 84% 39%;
+  --input: 24 26% 82%;
+  --ring: 18 95% 56%;
 
-  --chart-1: 160 84% 39%;
-  --chart-2: 178 72% 38%;
-  --chart-3: 185 22% 72%;
-  --chart-4: 195 54% 28%;
-  --chart-5: 213 78% 14%;
+  --chart-1: 18 95% 56%;
+  --chart-2: 174 70% 41%;
+  --chart-3: 50 96% 57%;
+  --chart-4: 261 83% 58%;
+  --chart-5: 24 20% 12%;
 
-  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
-  --radius: 0.5rem;
-  --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.15);
-  --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.2);
-  --shadow-sm: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 1px 2px -1px rgba(0,0,0,0.3);
-  --shadow: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 1px 2px -1px rgba(0,0,0,0.3);
-  --shadow-md: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 2px 4px -1px rgba(0,0,0,0.3);
-  --shadow-lg: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 4px 6px -1px rgba(0,0,0,0.3);
-  --shadow-xl: 0px 2px 0px 0px rgba(0,0,0,0.2), 0px 8px 10px -1px rgba(0,0,0,0.3);
-  --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.2);
-  --tracking-normal: 0em;
+  --radius: 1.35rem;
+  --shadow-2xs: 3px 3px 0px 0px rgba(28,25,23,0.18);
+  --shadow-xs: 4px 4px 0px 0px rgba(28,25,23,0.18);
+  --shadow-sm: 5px 5px 0px 0px rgba(28,25,23,0.2);
+  --shadow: 7px 7px 0px 0px rgba(28,25,23,0.2);
+  --shadow-md: 9px 9px 0px 0px rgba(28,25,23,0.22);
+  --shadow-lg: 12px 12px 0px 0px rgba(28,25,23,0.22);
+  --shadow-xl: 16px 16px 0px 0px rgba(28,25,23,0.24);
+  --shadow-2xl: 22px 22px 0px 0px rgba(28,25,23,0.24);
+  --tracking-normal: -0.01em;
   --spacing: 0.25rem;
 
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
@@ -144,18 +144,19 @@
   body {
     @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary;
     background-image:
-      radial-gradient(circle at top left, hsl(var(--primary) / 0.14), transparent 30rem),
-      radial-gradient(circle at bottom right, hsl(var(--secondary) / 0.12), transparent 34rem),
-      linear-gradient(135deg, hsl(213 78% 7%), hsl(190 67% 9%) 52%, hsl(213 78% 7%));
+      radial-gradient(circle at 8% 12%, hsl(var(--accent) / 0.55), transparent 20rem),
+      radial-gradient(circle at 88% 10%, hsl(var(--secondary) / 0.20), transparent 24rem),
+      radial-gradient(circle at 90% 82%, hsl(var(--primary) / 0.16), transparent 26rem),
+      linear-gradient(135deg, hsl(36 100% 96%), hsl(42 100% 92%) 52%, hsl(32 100% 95%));
     background-attachment: fixed;
   }
   
   /* Additional global utilities */
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-orange-500 to-yellow-500;
   }
   .gradient-bg {
-    @apply bg-gradient-to-br from-accent/90 to-secondary/90;
+    @apply bg-gradient-to-br from-primary via-orange-500 to-accent;
   }
 }
 
@@ -214,5 +215,24 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+}
+
+
+@layer components {
+  .container {
+    @apply max-w-7xl;
+  }
+
+  .neo-card {
+    @apply border-2 border-stone-900/80 bg-card shadow-[8px_8px_0_rgba(28,25,23,0.22)] transition-all duration-300;
+  }
+
+  .neo-card:hover {
+    @apply -translate-y-1 shadow-[12px_12px_0_rgba(28,25,23,0.25)];
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center rounded-full border-2 border-stone-900/80 bg-accent px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-accent-foreground shadow-[4px_4px_0_rgba(28,25,23,0.18)];
   }
 }

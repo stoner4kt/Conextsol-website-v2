@@ -20,7 +20,7 @@ export function BlogCard({ slug, title, excerpt, date, readTime, category, image
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
+      className="group flex flex-col neo-card bg-card rounded-[2rem] overflow-hidden transition-all duration-300"
     >
       <Link href={`/blog/${slug}`} className="relative aspect-[16/9] overflow-hidden bg-muted block">
         {image ? (
