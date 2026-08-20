@@ -13,7 +13,7 @@ function WhatsAppIcon({ size = 20 }: { size?: number }) {
 
 export function Footer() {
   return (
-    <footer className="bg-emerald-950 text-white pt-20 pb-10">
+    <footer className="bg-[#1c1917] text-white pt-20 pb-10 border-t-2 border-stone-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
@@ -28,24 +28,24 @@ export function Footer() {
                 className="h-9 w-auto object-contain"
               />
             </Link>
-            <p className="text-emerald-50/85 text-sm leading-relaxed max-w-xs">
+            <p className="text-orange-50/80 text-sm leading-relaxed max-w-xs">
               South Africa's results-driven web design and custom software development studio. We build digital assets that grow your business.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://www.facebook.com/share/1CuQspKwuJ/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" 
+              <a
+                href="https://www.facebook.com/share/1CuQspKwuJ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-2xl border-2 border-white/15 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
-              <a 
-                href="https://www.instagram.com/conextsol?igsh=M2c0cnJlbWVmN3B1" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" 
+              <a
+                href="https://www.instagram.com/conextsol?igsh=M2c0cnJlbWVmN3B1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-2xl border-2 border-white/15 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -57,12 +57,12 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-white">Services</h3>
             <ul className="space-y-4">
-              <li><Link href="/services/website-design" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Website Design</Link></li>
-              <li><Link href="/services/web-development" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Web Development</Link></li>
-              <li><Link href="/services/custom-software-development" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Custom Software</Link></li>
-              <li><Link href="/services/ui-ux-design" className="text-emerald-50/85 hover:text-white transition-colors text-sm">UI/UX Design</Link></li>
-              <li><Link href="/services/ecommerce-development" className="text-emerald-50/85 hover:text-white transition-colors text-sm">E-commerce</Link></li>
-              <li><Link href="/services/website-maintenance" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Maintenance & SEO</Link></li>
+              <li><Link href="/services/website-design" className="text-orange-50/80 hover:text-white transition-colors text-sm">Website Design</Link></li>
+              <li><Link href="/services/web-development" className="text-orange-50/80 hover:text-white transition-colors text-sm">Web Development</Link></li>
+              <li><Link href="/services/custom-software-development" className="text-orange-50/80 hover:text-white transition-colors text-sm">Custom Software</Link></li>
+              <li><Link href="/services/ui-ux-design" className="text-orange-50/80 hover:text-white transition-colors text-sm">UI/UX Design</Link></li>
+              <li><Link href="/services/ecommerce-development" className="text-orange-50/80 hover:text-white transition-colors text-sm">E-commerce</Link></li>
+              <li><Link href="/services/website-maintenance" className="text-orange-50/80 hover:text-white transition-colors text-sm">Maintenance & SEO</Link></li>
             </ul>
           </div>
 
@@ -70,18 +70,18 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-white">Company</h3>
             <ul className="space-y-4">
-              <li><Link href="/about" className="text-emerald-50/85 hover:text-white transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/portfolio" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Our Work</Link></li>
-              <li><Link href="/blog" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Blog & Insights</Link></li>
-              <li><Link href="/faq" className="text-emerald-50/85 hover:text-white transition-colors text-sm">FAQ</Link></li>
-              <li><Link href="/contact" className="text-emerald-50/85 hover:text-white transition-colors text-sm">Contact</Link></li>
+              <li><Link href="/about" className="text-orange-50/80 hover:text-white transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/portfolio" className="text-orange-50/80 hover:text-white transition-colors text-sm">Our Work</Link></li>
+              <li><Link href="/blog" className="text-orange-50/80 hover:text-white transition-colors text-sm">Blog & Insights</Link></li>
+              <li><Link href="/faq" className="text-orange-50/80 hover:text-white transition-colors text-sm">FAQ</Link></li>
+              <li><Link href="/contact" className="text-orange-50/80 hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 
           {/* Contact Col */}
           <div>
             <h3 className="font-bold text-lg mb-6 text-white">Get in Touch</h3>
-            <ul className="space-y-4 text-sm text-emerald-50/85">
+            <ul className="space-y-4 text-sm text-orange-50/80">
               <li>
                 <strong>Email:</strong><br />
                 <a href="mailto:info@conextsol.co.za" onClick={() => trackEmailClick('footer')} className="hover:text-white transition-colors">info@conextsol.co.za</a>
@@ -100,7 +100,7 @@ export function Footer() {
               href="https://wa.me/27661192498?text=Hi%20Conextsol%2C%20I%27m%20interested%20in%20a%20website%20quote"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg mt-6 font-medium hover:bg-[#20bd5a] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-2xl mt-6 border-2 border-white/20 shadow-[5px_5px_0_rgba(255,255,255,0.12)] font-medium hover:bg-[#20bd5a] transition-colors"
             >
               <WhatsAppIcon size={20} />
               Chat on WhatsApp
@@ -108,7 +108,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-emerald-50/70">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-orange-50/65">
           <p>© {new Date().getFullYear()} Conextsol. All rights reserved. Fully POPIA Compliant.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

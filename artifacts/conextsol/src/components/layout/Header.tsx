@@ -28,10 +28,10 @@ export function Header() {
   }, [location]);
 
   return (
-    <header 
+    <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent',
-        isScrolled ? 'bg-background/90 backdrop-blur-md border-border shadow-sm' : 'bg-background/80 backdrop-blur-sm'
+        isScrolled ? 'bg-background/92 backdrop-blur-xl border-stone-900/80 shadow-[0_6px_0_rgba(28,25,23,0.08)]' : 'bg-background/75 backdrop-blur-md'
       )}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
@@ -46,7 +46,7 @@ export function Header() {
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group z-50 relative">
             <img
@@ -57,21 +57,21 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className={cn("text-sm font-medium hover:text-primary transition-colors", location === '/' && "text-primary")}>
+          <nav className="hidden md:flex items-center gap-2 rounded-full border-2 border-stone-900/80 bg-card/80 p-2 shadow-[5px_5px_0_rgba(28,25,23,0.14)]">
+            <Link href="/" className={cn("rounded-full px-4 py-2 text-sm font-bold hover:bg-accent hover:text-accent-foreground transition-colors", location === '/' && "text-primary")}>
               Home
             </Link>
-            
+
             {/* Services Dropdown */}
-            <div 
+            <div
               className="relative group"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button 
+              <button
                 type="button"
                 className={cn(
-                  "flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors py-8", 
+                  "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-bold hover:bg-accent hover:text-accent-foreground transition-colors",
                   (location.startsWith('/services') || servicesOpen) && "text-primary"
                 )}
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -79,19 +79,19 @@ export function Header() {
               >
                 Services <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", servicesOpen ? "rotate-180" : "group-hover:rotate-180")} />
               </button>
-              
-              <div 
+
+              <div
                 className={cn(
-                  "absolute top-full left-1/2 -translate-x-1/2 w-[600px] z-50 bg-card border border-border shadow-xl rounded-2xl p-6 transition-all duration-200 grid grid-cols-2 gap-x-8 gap-y-6 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:bg-transparent",
-                  servicesOpen 
-                    ? "opacity-100 visible pointer-events-auto" 
+                  "absolute top-[calc(100%+1rem)] left-1/2 -translate-x-1/2 w-[600px] z-50 neo-card rounded-[2rem] p-6 transition-all duration-200 grid grid-cols-2 gap-x-8 gap-y-6 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:bg-transparent",
+                  servicesOpen
+                    ? "opacity-100 visible pointer-events-auto"
                     : "opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
                 )}
               >
                 {services.map((service) => (
-                  <Link 
-                    key={service.slug} 
-                    href={`/services/${service.slug}`} 
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
                     onClick={() => setServicesOpen(false)}
                     className="flex flex-col gap-1 group/item p-1.5 -m-1.5 rounded-lg hover:bg-muted/40 transition-colors"
                   >
@@ -101,8 +101,8 @@ export function Header() {
                 ))}
                 <div className="col-span-2 pt-4 mt-2 border-t border-border flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Not sure what you need?</span>
-                  <Link 
-                    href="/services" 
+                  <Link
+                    href="/services"
                     onClick={() => setServicesOpen(false)}
                     className="text-sm font-bold text-primary hover:underline"
                   >
@@ -112,13 +112,13 @@ export function Header() {
               </div>
             </div>
 
-            <Link href="/portfolio" className={cn("text-sm font-medium hover:text-primary transition-colors", location === '/portfolio' && "text-primary")}>
+            <Link href="/portfolio" className={cn("rounded-full px-4 py-2 text-sm font-bold hover:bg-accent hover:text-accent-foreground transition-colors", location === '/portfolio' && "text-primary")}>
               Portfolio
             </Link>
-            <Link href="/about" className={cn("text-sm font-medium hover:text-primary transition-colors", location === '/about' && "text-primary")}>
+            <Link href="/about" className={cn("rounded-full px-4 py-2 text-sm font-bold hover:bg-accent hover:text-accent-foreground transition-colors", location === '/about' && "text-primary")}>
               About
             </Link>
-            <Link href="/blog" className={cn("text-sm font-medium hover:text-primary transition-colors", location.startsWith('/blog') && "text-primary")}>
+            <Link href="/blog" className={cn("rounded-full px-4 py-2 text-sm font-bold hover:bg-accent hover:text-accent-foreground transition-colors", location.startsWith('/blog') && "text-primary")}>
               Blog
             </Link>
           </nav>
@@ -136,8 +136,8 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2.5 -mr-2 z-50 relative rounded-lg border border-border/50 bg-background/80 text-foreground hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+          <button
+            className="md:hidden p-2.5 -mr-2 z-50 relative rounded-2xl border-2 border-stone-900/80 bg-card text-foreground hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
@@ -150,16 +150,16 @@ export function Header() {
       {/* Mobile Nav */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b border-border shadow-2xl md:hidden overflow-hidden max-h-[calc(100dvh-80px)] overflow-y-auto z-50"
+            className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b-2 border-stone-900/80 shadow-2xl md:hidden overflow-hidden max-h-[calc(100dvh-80px)] overflow-y-auto z-50"
           >
             <nav className="flex flex-col p-4 gap-1.5 container mx-auto">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className={cn(
                   "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors flex items-center justify-between",
                   location === '/' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
@@ -167,9 +167,9 @@ export function Header() {
               >
                 Home
               </Link>
-              
+
               <div className="flex flex-col">
-                <button 
+                <button
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className={cn(
                     "px-4 py-3 text-base font-medium flex items-center justify-between rounded-xl hover:bg-muted/80 transition-colors w-full text-left",
@@ -181,15 +181,15 @@ export function Header() {
                 </button>
                 <AnimatePresence>
                   {servicesOpen && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                       className="flex flex-col gap-1 pl-6 pr-2 py-1 overflow-hidden"
                     >
-                      <Link 
-                        href="/services" 
+                      <Link
+                        href="/services"
                         className={cn(
                           "px-3 py-2 text-sm rounded-lg font-medium hover:bg-muted/60 transition-colors",
                           location === '/services' ? "text-primary font-semibold" : "text-primary"
@@ -198,9 +198,9 @@ export function Header() {
                         All Services →
                       </Link>
                       {services.map(s => (
-                        <Link 
-                          key={s.slug} 
-                          href={`/services/${s.slug}`} 
+                        <Link
+                          key={s.slug}
+                          href={`/services/${s.slug}`}
                           className={cn(
                             "px-3 py-2 text-sm rounded-lg transition-colors hover:bg-muted/60",
                             location === `/services/${s.slug}` ? "text-primary font-medium bg-primary/5" : "text-muted-foreground hover:text-foreground"
@@ -214,8 +214,8 @@ export function Header() {
                 </AnimatePresence>
               </div>
 
-              <Link 
-                href="/portfolio" 
+              <Link
+                href="/portfolio"
                 className={cn(
                   "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
                   location === '/portfolio' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
@@ -223,8 +223,8 @@ export function Header() {
               >
                 Portfolio
               </Link>
-              <Link 
-                href="/about" 
+              <Link
+                href="/about"
                 className={cn(
                   "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
                   location === '/about' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
@@ -232,8 +232,8 @@ export function Header() {
               >
                 About
               </Link>
-              <Link 
-                href="/blog" 
+              <Link
+                href="/blog"
                 className={cn(
                   "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
                   location.startsWith('/blog') ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
@@ -241,8 +241,8 @@ export function Header() {
               >
                 Blog
               </Link>
-              <Link 
-                href="/faq" 
+              <Link
+                href="/faq"
                 className={cn(
                   "px-4 py-3 text-base font-medium rounded-xl hover:bg-muted/80 transition-colors",
                   location === '/faq' ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
@@ -250,9 +250,9 @@ export function Header() {
               >
                 FAQ
               </Link>
-              
+
               <div className="h-px bg-border/60 my-3 mx-2" />
-              
+
               <div className="flex flex-col gap-3 px-2 pt-1 pb-6">
                 <Button className="w-full justify-center text-base py-6 shadow-md" size="lg" asChild>
                   <Link href="/contact">Get a Quote</Link>
