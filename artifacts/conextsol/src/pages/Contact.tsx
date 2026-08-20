@@ -30,7 +30,7 @@ const formSchema = z.object({
   phone: z.string().min(9, "Phone number is required"),
   companyName: z.string().optional(),
   service: z.string().min(1, "Please select a service"),
-  budget: z.string().min(1, "Please select a budget range"),
+  budget: z.string().min(1, "Please enter your budget amount"),
   message: z.string().min(10, "Please provide more details about your project")
 });
 
@@ -120,7 +120,7 @@ export default function Contact() {
               transition={{ delay: 0.1 }}
               className="text-xl text-muted-foreground"
             >
-              Fill out the form below or message us directly on WhatsApp. We typically respond within a few hours.
+              Fill out the form below or message us directly on WhatsApp. We typically respond within a few hours. Websites range from R500 upwards depending on your requests.
             </motion.p>
           </div>
 
@@ -279,20 +279,16 @@ export default function Contact() {
                         name="budget"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-foreground">Project Budget Range *</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger className="h-12 bg-background">
-                                  <SelectValue placeholder="Select a range" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="15k-30k">R15,000 - R30,000</SelectItem>
-                                <SelectItem value="30k-60k">R30,000 - R60,000</SelectItem>
-                                <SelectItem value="60k-150k">R60,000 - R150,000</SelectItem>
-                                <SelectItem value="150k+">R150,000+</SelectItem>
-                              </SelectContent>
-                            </Select>
+                            <FormLabel className="text-foreground">Project Budget Amount *</FormLabel>
+                            <FormControl>
+                              <Input
+                                inputMode="numeric"
+                                placeholder="e.g. R2,500"
+                                className="h-12 bg-background"
+                                {...field}
+                              />
+                            </FormControl>
+                            <p className="text-xs text-muted-foreground">Websites range from R500 upwards depending on your requests.</p>
                             <FormMessage />
                           </FormItem>
                         )}
