@@ -20,7 +20,7 @@ export function CaseStudyCard({ id, clientType, industry, services, keyMetric, d
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
+      className="group flex flex-col neo-card bg-card rounded-[2rem] overflow-hidden transition-all duration-300"
     >
       <div className="relative aspect-[3/2] overflow-hidden bg-muted">
         <img 
@@ -32,7 +32,7 @@ export function CaseStudyCard({ id, clientType, industry, services, keyMetric, d
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-foreground/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+          <span className="bg-accent text-accent-foreground border-2 border-stone-900/80 text-xs font-black px-3 py-1.5 rounded-full">
             {industry}
           </span>
         </div>
@@ -48,7 +48,7 @@ export function CaseStudyCard({ id, clientType, industry, services, keyMetric, d
         </div>
         
         <div className="mt-auto">
-          <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 mb-6">
+          <div className="bg-yellow-100 border-2 border-stone-900/80 rounded-2xl p-4 mb-6">
             <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Key Result</div>
             <div className="font-bold text-foreground text-lg">{keyMetric}</div>
           </div>
