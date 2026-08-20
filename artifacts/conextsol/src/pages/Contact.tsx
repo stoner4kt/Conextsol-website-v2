@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MapPin, Phone, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { trackEmailClick, trackFormSubmit, trackPhoneClick, trackWhatsAppClick } from '@/lib/analytics';
+import { services } from '@/data/services';
 
 function WhatsAppIcon({ size = 24 }: { size?: number }) {
   return (
@@ -262,12 +263,11 @@ export default function Contact() {
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent>
-                                <SelectItem value="website-design">Website Design</SelectItem>
-                                <SelectItem value="web-development">Web Development</SelectItem>
-                                <SelectItem value="custom-software">Custom Software</SelectItem>
-                                <SelectItem value="ecommerce">E-commerce</SelectItem>
-                                <SelectItem value="ui-ux">UI/UX Design</SelectItem>
-                                <SelectItem value="other">Other / Unsure</SelectItem>
+                                {services.map((service) => (
+                                  <SelectItem key={service.slug} value={service.slug}>
+                                    {service.shortTitle}
+                                  </SelectItem>
+                                ))}
                               </SelectContent>
                             </Select>
                             <FormMessage />
