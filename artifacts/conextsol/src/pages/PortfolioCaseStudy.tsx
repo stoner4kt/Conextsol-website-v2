@@ -22,6 +22,8 @@ export default function PortfolioCaseStudy() {
       <SEOHead
         title={`${project.clientType} Case Study | Conextsol Portfolio`}
         description={`${project.description} Result: ${project.keyMetric}.`}
+        canonicalUrl={`/portfolio/${project.id}`}
+        breadcrumbLabels={{ [`/portfolio/${project.id}`]: project.clientType }}
       />
 
       <section className="pt-24 pb-16 bg-muted/30 border-b border-border">

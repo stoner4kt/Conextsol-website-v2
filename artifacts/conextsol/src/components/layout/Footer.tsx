@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Facebook, Instagram } from 'lucide-react';
 import logoImg from '@assets/logo.png';
-import { trackEmailClick, trackPhoneClick } from '@/lib/analytics';
+import { trackEmailClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/analytics';
 
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
   return (
@@ -101,6 +101,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-2xl mt-6 border-2 border-white/20 shadow-[5px_5px_0_rgba(255,255,255,0.12)] font-medium hover:bg-[#20bd5a] transition-colors"
+              onClick={() => trackWhatsAppClick('footer')}
             >
               <WhatsAppIcon size={20} />
               Chat on WhatsApp

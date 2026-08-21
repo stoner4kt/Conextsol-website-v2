@@ -88,6 +88,7 @@ export default function ServicePage() {
         description={service.metaDescription}
         canonicalUrl={`/services/${service.slug}`}
         schema={[serviceSchema, faqSchema]}
+        breadcrumbLabels={{ [`/services/${service.slug}`]: service.shortTitle }}
       />
       
       {/* Hero */}

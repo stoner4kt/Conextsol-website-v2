@@ -9,6 +9,7 @@ interface SEOHeadProps {
   type?: 'website' | 'article' | 'product';
   image?: string;
   schema?: object | object[];
+  breadcrumbLabels?: Record<string, string>;
 }
 
 export function SEOHead({
@@ -17,12 +18,13 @@ export function SEOHead({
   canonicalUrl,
   type = 'website',
   image = 'https://conextsol.co.za/og-image.jpg',
-  schema
+  schema,
+  breadcrumbLabels = {}
 }: SEOHeadProps) {
   const fullTitle = title.includes('Conextsol') ? title : `${title} | Conextsol`;
   const path = canonicalUrl || '/';
   const url = canonicalUrl ? `https://conextsol.co.za${canonicalUrl}` : 'https://conextsol.co.za';
-  const breadcrumbSchema = createBreadcrumbSchema(path);
+  const breadcrumbSchema = createBreadcrumbSchema(path, breadcrumbLabels);
 
   // Include Organization schema plus breadcrumbs and any specific schema passed
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];

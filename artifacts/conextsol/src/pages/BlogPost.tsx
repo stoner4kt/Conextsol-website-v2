@@ -51,6 +51,7 @@ export default function BlogPost() {
         type="article"
         canonicalUrl={`/blog/${post.slug}`}
         schema={articleSchema}
+        breadcrumbLabels={{ [`/blog/${post.slug}`]: post.title }}
       />
       
       <article className="pt-24 pb-24">
