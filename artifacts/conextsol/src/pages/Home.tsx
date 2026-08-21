@@ -13,6 +13,7 @@ import { portfolio } from '@/data/portfolio';
 import { blogPosts } from '@/data/blog';
 
 import heroImg from '@assets/hero.jpg';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 // Map icon strings to components
 const iconMap: Record<string, any> = {
@@ -93,6 +94,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-card text-foreground border-2 border-stone-900/80 font-black rounded-2xl text-lg hover:bg-accent transition-all shadow-[6px_6px_0_rgba(28,25,23,0.18)] hover:-translate-y-1 flex items-center justify-center gap-2"
+                onClick={() => trackWhatsAppClick('home_hero')}
               >
                 WhatsApp Us
               </a>
