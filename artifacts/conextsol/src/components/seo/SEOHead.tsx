@@ -1,12 +1,13 @@
-import { Helmet } from 'react-helmet-async';
-import organizationSchema from '@/data/schema.json';
-import { createBreadcrumbSchema } from '@/lib/breadcrumbSchema';
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "wouter";
+import organizationSchema from "@/data/schema.json";
+import { createBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 interface SEOHeadProps {
   title: string;
   description: string;
   canonicalUrl?: string;
-  type?: 'website' | 'article' | 'product';
+  type?: "website" | "article" | "product";
   image?: string;
   schema?: object | object[];
   breadcrumbLabels?: Record<string, string>;
@@ -16,18 +17,25 @@ export function SEOHead({
   title,
   description,
   canonicalUrl,
-  type = 'website',
-  image = 'https://conextsol.co.za/og-image.jpg',
+  type = "website",
+  image = "https://conextsol.co.za/og-image.jpg",
   schema,
-  breadcrumbLabels = {}
+  breadcrumbLabels = {},
 }: SEOHeadProps) {
-  const fullTitle = title.includes('Conextsol') ? title : `${title} | Conextsol`;
-  const path = canonicalUrl || '/';
-  const url = canonicalUrl ? `https://conextsol.co.za${canonicalUrl}` : 'https://conextsol.co.za';
+  const [location] = useLocation();
+  const fullTitle = title.includes("Conextsol")
+    ? title
+    : `${title} | Conextsol`;
+  const path = canonicalUrl || location || "/";
+  const url = `https://conextsol.co.za${path === "/" ? "" : path}`;
   const breadcrumbSchema = createBreadcrumbSchema(path, breadcrumbLabels);
 
   // Include Organization schema plus breadcrumbs and any specific schema passed
-  const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+  const extraSchemas = schema
+    ? Array.isArray(schema)
+      ? schema
+      : [schema]
+    : [];
   const jsonLd = [organizationSchema, breadcrumbSchema, ...extraSchemas];
 
   return (
@@ -51,9 +59,7 @@ export function SEOHead({
       <meta name="twitter:image" content={image} />
 
       {/* JSON-LD */}
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
   );
 }
