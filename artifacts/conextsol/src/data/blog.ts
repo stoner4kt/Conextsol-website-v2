@@ -269,5 +269,115 @@ export const blogPosts = [
 <p>We often recommend a hybrid approach. Use off-the-shelf tools for generic tasks (like Xero for accounting), but let us build a <strong>custom central dashboard or CRM</strong> that pulls data from those tools via APIs while managing your unique core business logic.</p>
 <p>Ready to digitize and automate your operations? <strong><a href="/contact">Book a discovery call with our engineering team today.</a></strong></p>
     `
+  },
+  {
+    slug: 'appliance-911-case-study',
+    title: 'Case Study: Growing Appliance-911’s Organic Search Visibility in Cape Town',
+    excerpt: 'How Conextsol built and managed a local appliance-repair website around service-specific search intent, mobile conversion paths and technical SEO—and how Search Console performance changed over time.',
+    date: 'September 15, 2026',
+    publishedIsoDate: '2026-09-15',
+    lastUpdated: '2026-09-15',
+    readTime: '7 min read',
+    category: 'Case Studies',
+    image: blog1,
+    metaTitle: 'Appliance-911 Case Study: Website & SEO Growth | Conextsol',
+    metaDescription: 'See how Conextsol built and manages Appliance-911’s Cape Town appliance-repair website, with service-focused SEO and measurable Google Search Console growth.',
+    content: `
+<h1>Case Study: Growing Appliance-911’s Organic Search Visibility in Cape Town</h1>
+<p><strong>Client:</strong> Appliance-911 &nbsp;|&nbsp; <strong>Location:</strong> Cape Town, South Africa &nbsp;|&nbsp; <strong>Focus:</strong> Web development, local SEO, technical SEO and ongoing website management</p>
+
+<h2>The Challenge</h2>
+<p>Appliance repair is a high-intent local search category. When a customer searches for a washing-machine repair, refrigerator repair or oven repair, they are usually looking for a provider they can contact quickly.</p>
+<p>The website therefore needed to do more than present a business online. It needed to make individual services easy for search engines to understand, give Cape Town customers clear information, and make contacting the business simple on mobile.</p>
+
+<h2>Our Approach</h2>
+<p>Conextsol structured the site around the services customers actually search for. Instead of relying on one generic appliance-repair page, the website contains dedicated service pages covering appliances such as washing machines, refrigerators, dryers, ovens, dishwashers and microwaves, alongside gas-appliance services.</p>
+<p>Those pages are supported by local-business structured data and service-specific content, giving search engines clearer context about the business and the services it provides.</p>
+
+<h2>Conversion-Focused Website Management</h2>
+<p>For a local repair business, a visitor who cannot quickly find a phone number or booking route is a lost opportunity. The site therefore emphasizes direct contact and mobile-friendly pathways, including clear calls to action and service information designed around the customer's immediate problem.</p>
+<p>The work also includes ongoing technical and content improvements rather than treating the website as a one-time launch.</p>
+
+<h2>What Google Search Console Shows</h2>
+<p>The Search Console comparison supplied for this case study compares the latest three months with the previous three months.</p>
+<ul>
+<li><strong>Clicks increased from 40 to 160</strong> — a 300% increase.</li>
+<li><strong>Impressions increased from 2.08K to 10.1K</strong> — almost five times the previous period.</li>
+<li><strong>Average position improved from 26.8 to 24.4.</strong></li>
+<li><strong>CTR was 1.6%</strong> in the latest three-month period, compared with 1.9% previously.</li>
+</ul>
+<p>The query data also shows growing visibility around the business name and local intent. For example, “appliance 911” generated 33 clicks in the latest period compared with 7 previously, while “appliance 911 reviews” generated 18 clicks compared with none in the previous period.</p>
+
+<h2>The Result</h2>
+<p>The clearest result is a much larger search footprint. Appliance-911 is now receiving substantially more organic clicks and appearing in far more Google searches than in the previous comparison period.</p>
+<p>These figures do not by themselves prove that every increase was caused by one individual website change, so we treat Search Console as a measurement of the site's growing search visibility rather than claiming a direct revenue attribution that the available data cannot establish.</p>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Service-specific pages matter:</strong> Local businesses can target a wider range of high-intent searches when each core service has a clear destination page.</li>
+<li><strong>Technical SEO supports discoverability:</strong> Structured data, canonical URLs, sitemaps and crawlable page architecture help search engines understand the site.</li>
+<li><strong>Mobile conversion paths matter:</strong> Repair customers often search from a phone and need a fast route to contact the business.</li>
+<li><strong>SEO is ongoing:</strong> The website is managed as a growth asset rather than a static brochure.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Appliance-911 demonstrates what can happen when a local-service website is built around real search intent and then continuously improved. The latest Search Console comparison shows a 4× increase in clicks and nearly 5× the impressions of the previous three-month period.</p>
+<p><strong>Want a website built to compete in local search? <a href="/contact">Talk to Conextsol about your project.</a></strong></p>
+    `
+  },
+  {
+    slug: 'marvin-appliance-repairs-case-study',
+    title: 'Case Study: Building a Local SEO Foundation for Marvin’s Appliance Repairs',
+    excerpt: 'How Conextsol built a service-led local website for Marvin’s Appliance Repairs and improved its visibility for appliance-repair searches across Cape Town and Kuils River.',
+    date: 'September 15, 2026',
+    publishedIsoDate: '2026-09-15',
+    lastUpdated: '2026-09-15',
+    readTime: '7 min read',
+    category: 'Case Studies',
+    image: blog2,
+    metaTitle: 'Marvin’s Appliance Repairs Case Study | Conextsol',
+    metaDescription: 'Learn how Conextsol built and manages Marvin’s Appliance Repairs website with local SEO, service pages, mobile conversion paths and measurable Search Console growth.',
+    content: `
+<h1>Case Study: Building a Local SEO Foundation for Marvin’s Appliance Repairs</h1>
+<p><strong>Client:</strong> Marvin’s Appliance Repairs &nbsp;|&nbsp; <strong>Market:</strong> Cape Town and Kuils River &nbsp;|&nbsp; <strong>Focus:</strong> Website development, local SEO, technical SEO and conversion optimisation</p>
+
+<h2>The Challenge</h2>
+<p>For a local appliance-repair business, visibility depends heavily on being found when someone searches for a specific appliance problem in their area. A generic homepage is rarely enough to cover all of those search intents.</p>
+<p>Our goal was to create a focused website that clearly communicated the services, locations and booking options while giving each major repair category a page that could compete in organic search.</p>
+
+<h2>Building the Site Around Search Intent</h2>
+<p>Conextsol built the site with dedicated service pages for general appliance repairs, microwaves, refrigerators and washing machines. The site also includes supporting FAQ and legal pages, a sitemap and a robots file to provide a clean technical foundation.</p>
+<p>The content and metadata are aimed at local searches, with Cape Town and Kuils River appearing naturally in the service positioning. This lets the website target searches such as appliance repairs in Cape Town, washing-machine repairs in Kuils River and nearby appliance-repair queries.</p>
+
+<h2>Designed for Real Customers on Mobile</h2>
+<p>Local repair customers often arrive from a phone with an immediate problem. The website therefore emphasizes clear service descriptions, straightforward contact options and mobile-friendly calls to action rather than making visitors work to find the next step.</p>
+<p>This is an important part of local SEO strategy: ranking is only useful when the resulting visit can turn into a genuine enquiry.</p>
+
+<h2>What Google Search Console Shows</h2>
+<p>The Search Console screenshot supplied for this case study compares the latest three months with the previous three months.</p>
+<ul>
+<li><strong>Clicks increased from 32 to 70</strong> — a 119% increase.</li>
+<li><strong>Impressions increased from 1.38K to 4.16K</strong> — about a 202% increase.</li>
+<li><strong>Average position improved from 23.9 to 19.1.</strong></li>
+<li><strong>CTR was 1.7%</strong> in the latest period, compared with 2.3% previously.</li>
+</ul>
+<p>The search queries also show visibility developing around service and local intent. The latest period includes searches such as “microwave repairs near me”, “appliance repairs cape town”, “washing machine repairs kuilsriver”, “fridge repairs near me” and “microwave repairs”.</p>
+
+<h2>The Result</h2>
+<p>The site is appearing in substantially more Google searches and generating more organic clicks than in the previous comparison period. Just as importantly, the queries shown in Search Console are closely aligned with the services the business actually provides.</p>
+<p>We treat these Search Console numbers as evidence of increased organic visibility, not as a claim of directly attributable revenue or leads, because the available data does not include completed bookings or sales.</p>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Local SEO starts with structure:</strong> Clear service pages give Google and customers a better understanding of what the business offers.</li>
+<li><strong>Location targeting should be useful:</strong> Cape Town and Kuils River are integrated into the site's service positioning rather than added as disconnected keyword lists.</li>
+<li><strong>Technical foundations matter:</strong> Metadata, sitemap and crawlability support the content strategy.</li>
+<li><strong>Visibility and conversion work together:</strong> The site is designed to turn a search visit into a phone, WhatsApp or booking enquiry.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Marvin’s Appliance Repairs shows the value of building a local-service website around the way customers actually search. In the latest three-month Search Console comparison, clicks more than doubled, impressions more than tripled and average position improved by 4.8 positions.</p>
+<p><strong>Need a local-service website that is built for search and conversion? <a href="/contact">Start a conversation with Conextsol.</a></strong></p>
+    `
   }
 ];
