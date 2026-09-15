@@ -23,6 +23,8 @@ const routesToPrerender = [
   '/blog/web-design-vs-web-development-whats-the-difference',
   '/blog/seo-for-south-african-businesses-complete-guide',
   '/blog/custom-software-vs-off-the-shelf-which-is-right-for-your-business',
+  '/blog/appliance-911-case-study',
+  '/blog/marvin-appliance-repairs-case-study',
   '/faq',
   '/contact',
   '/privacy-policy',
