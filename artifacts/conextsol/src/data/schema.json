@@ -54,12 +54,13 @@
     "UI/UX Design",
     "E-commerce Development",
     "Google Ads Management",
+    "Website Maintenance",
     "Managed Website Hosting & Infrastructure"
   ],
   "telephone": "+27661192498",
   "email": "info@conextsol.co.za",
   "image": "https://conextsol.co.za/og-image.jpg",
-  "priceRange": "R R R",
+  "priceRange": "R10,000 - R50,000",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -78,6 +79,6 @@
     "https://www.facebook.com/conextsol",
     "https://www.linkedin.com/company/conextsol",
     "https://www.instagram.com/conextsol",
-    "https://g.page/r/conextsol"
+    "https://share.google/tCPiMqDzHlICTwwNw"
   ]
 }
