@@ -144,6 +144,23 @@ export default function ServicePage() {
                 <p className="text-muted-foreground leading-relaxed">
                   {service.longDescription}
                 </p>
+
+                {/* Body Sections — SEO content depth */}
+                {(service as any).bodySections && (
+                  <div className="mt-12 space-y-10">
+                    {((service as any).bodySections as Array<{heading: string; content: string}>).map(
+                      (section, idx) => (
+                        <div key={idx}>
+                          <h3 className="text-2xl font-bold text-foreground mb-4">{section.heading}</h3>
+                          <div
+                            className="prose prose-lg prose-slate dark:prose-invert max-w-none text-muted-foreground leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: section.content }}
+                          />
+                        </div>
+                      )
+                    )}
+                  </div>
+                )}
                 
                 <div className="mt-12 p-8 bg-muted/50 rounded-2xl border border-border">
                   <h3 className="text-xl font-bold text-foreground mb-4">Who is this for?</h3>
