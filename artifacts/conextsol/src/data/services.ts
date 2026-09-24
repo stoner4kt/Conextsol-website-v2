@@ -1,3 +1,8 @@
+export interface ServiceBodySection {
+  heading: string;
+  content: string; // HTML string rendered with dangerouslySetInnerHTML
+}
+
 export const services = [
   {
     slug: 'website-design',
