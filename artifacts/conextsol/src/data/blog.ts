@@ -79,12 +79,12 @@ export const blogPosts = [
     excerpt: 'From cheap DIY builders to enterprise custom software, we break down the true cost of web development in South Africa and what you should expect to pay.',
     date: 'February 28, 2026',
     publishedIsoDate: '2026-02-28',
-    lastUpdated: '2026-03-15',
-    readTime: '8 min read',
+    lastUpdated: '2026-09-01',
+    readTime: '14 min read',
     category: 'Guides',
     image: blog2,
-    metaTitle: 'How Much Does a Website Cost in South Africa? (2026) | Conextsol',
-    metaDescription: 'A comprehensive guide to website pricing in South Africa for 2026. Understand the difference between DIY, freelancers, and professional agency builds.',
+    metaTitle: 'How Much Does a Website Cost in South Africa? (2026 Complete Pricing Guide) | Conextsol',
+    metaDescription: 'Complete 2026 guide to website costs in South Africa. Compare DIY, freelancer, agency, and custom software pricing. Includes what affects cost, hidden fees, and ROI calculation.',
     content: `
 <h1>How Much Does a Website Cost in South Africa? (2026 Pricing Guide)</h1>
 <p>"How much does a website cost?" is the most common question we get at Conextsol. It is also the hardest to answer simply, because a website can be anything from a single-page digital business card to a complex, database-driven custom web application.</p>
@@ -114,6 +114,10 @@ export const blogPosts = [
 <li><strong>Who it's for:</strong> Established SMEs, professional service firms (lawyers, accountants, medical professionals), and growing brands that need their website to actively generate revenue.</li>
 </ul>
 
+<h3>What Affects the Price Within the Professional Tier?</h3>
+<p>Even within the professional agency tier, the scope of a website can vary. The <strong>number of pages</strong> is one factor: Conextsol's website design process specifically identifies the number of pages, project complexity, and the speed of receiving content and feedback as factors that affect the project timeline. Whether a <strong>CMS is required</strong> also matters to the scope, because Conextsol builds sites on modern CMS platforms and provides training sessions so clients can manage their content.</p>
+<p>Content requirements are another consideration. Clients can provide their own written content, while Conextsol also offers <strong>professional SEO copywriting assistance</strong> to structure and refine messaging for search visibility and conversions. E-commerce projects involve additional functionality, including payment gateway integrations such as PayFast, Yoco, Peach Payments, Ozow, Stripe, and PayPal, so e-commerce starts higher than a standard business website when those integrations are required. Custom visual work can also add scope, including <strong>Interactive Framer Motion animations</strong>. SEO setup is not an optional technical add-on in Conextsol's development process: <strong>Technical SEO is baked into our development process</strong>, including optimized meta tags, semantic HTML, fast load times, and structured data (JSON-LD).</p>
+
 <h2>Tier 4: Custom Software & Advanced E-commerce (R80,000 - R500,000+)</h2>
 <p>These are bespoke web applications, custom SaaS products, complex CRM integrations, or large-scale e-commerce platforms.</p>
 <ul>
@@ -130,9 +134,27 @@ export const blogPosts = [
 <li><strong>Marketing/SEO:</strong> Driving traffic to the site.</li>
 </ol>
 
-<h2>Conclusion</h2>
-<p>Viewing a website as a "cost" is a flawed mindset. It is an investment. A R30,000 website that generates R200,000 in new business is infinitely cheaper than a R5,000 website that generates nothing.</p>
-<p><strong>Want a precise quote for your project? <a href="/contact">Get in touch with us today.</a></strong></p>
+<h2>What's Included vs. What Costs Extra?</h2>
+<p>The exact scope is always defined by the project, but the services and FAQs in the Conextsol codebase make a useful distinction between features included in a professional Conextsol build and items that may sit outside the core website build.</p>
+<table>
+<thead><tr><th>Included in a Conextsol build</th><th>Common extras</th></tr></thead>
+<tbody>
+<tr><td><strong>Custom UI/UX design</strong> tailored to the brand</td><td>Copywriting</td></tr>
+<tr><td><strong>Mobile-first &amp; fully responsive</strong> development</td><td>Professional photography</td></tr>
+<tr><td><strong>Conversion Rate Optimization (CRO)</strong></td><td>E-commerce features and integrations</td></tr>
+<tr><td><strong>WCAG 2.2 accessibility</strong> compliance</td><td>Google Ads setup</td></tr>
+<tr><td><strong>Technical SEO</strong> as part of development</td><td>Monthly maintenance retainer</td></tr>
+<tr><td><strong>Performance optimization</strong> and fast-loading optimized assets</td><td>Managed hosting</td></tr>
+<tr><td><strong>Client training</strong> for the CMS</td><td></td></tr>
+<tr><td><strong>Full IP transfer</strong> on final payment</td><td></td></tr>
+</tbody>
+</table>
+<p>Maintenance is available as a separate website-maintenance service, while managed hosting is a separate managed infrastructure service. E-commerce, Google Ads, copywriting, and other requirements should be scoped according to the project rather than assumed to be part of every standard business website.</p>
+
+<h2>The Hidden Costs</h2>
+<p>Website pricing in South Africa spans several distinct tiers. <strong>DIY platforms</strong> can keep the upfront spend very low, <strong>budget freelancers</strong> typically serve businesses looking for a basic online presence, <strong>professional agency websites</strong> sit in the R20,000 - R60,000+ range covered by this guide, and <strong>custom software and advanced e-commerce</strong> can range from R80,000 - R500,000+ depending on the requirements described in the project.</p>
+<p>Viewing a website as a "cost" is a flawed mindset. It is an investment. A R30,000 website that generates R200,000 in new business is infinitely cheaper than a R5,000 website that generates nothing. The right budget depends on the business goals, required functionality, content, integrations, and level of support involved.</p>
+<p>Conextsol serves businesses across South Africa from Cape Town and provides transparent, scoped quotes based on the actual requirements of each project. <strong><a href="/services/website-design">Explore our website design services</a> or <a href="/contact">request a free quote</a>.</strong></p>
     `
   },
   {
