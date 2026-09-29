@@ -544,7 +544,6 @@ export const blogPosts = [
 <p>Shopify, WooCommerce, and Headless Commerce are different approaches to building an online store, but the South African requirements around payments, fulfilment, mobile shopping, checkout, security, and performance remain central to the decision. Conextsol's e-commerce service supports all three approaches and integrates local payment gateways, local courier APIs, inventory and ERP requirements, optimized checkout flows, and mobile-optimized shopping experiences.</p>
 <p>If you are planning a new online store or replacing an existing platform, start with the requirements rather than the platform name. <a href="/services/ecommerce-development">Explore Conextsol's e-commerce development services</a> to see how these capabilities fit together, or <a href="/contact">contact Conextsol</a> to discuss the requirements of your South African e-commerce project.</p>
 `
-  }
   },
   {
     slug: 'how-much-do-google-ads-cost-in-south-africa',
