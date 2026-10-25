@@ -786,9 +786,8 @@ export const blogPosts = [
 <p>UI and UX are complementary disciplines. UI shapes the visual interface through hierarchy, typography, colours, and interactive elements. UX considers the research, structure, and journey that help people use the product. When they work together, the result is an experience that looks consistent with your brand and makes the next step easier to understand. For South African businesses, that experience also needs to work on mobile screens and support the actions the website is meant to encourage.</p>
 <p>Conextsol's UI/UX service brings together research, wireframing, prototyping, high-fidelity interface design, usability testing, and design systems. Explore our <a href="/services/ui-ux-design">UI/UX design services</a> or our <a href="/services/website-design">website design</a> service to see how these capabilities fit your project. If you would like to discuss your website or digital product, <a href="/contact">contact Conextsol</a>.</p>
 `
-  }
-  {
-    slug: 'signs-your-website-needs-a-redesign',
+  },
+  {,
     title: '5 Signs Your Business Website Needs a Redesign (And What to Do About It)',
     excerpt: 'Most business owners know their website is underperforming — they just don't know why. These five signs tell you it is time for a professional redesign.',
     date: 'November 17, 2026',
