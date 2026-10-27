@@ -844,7 +844,7 @@ export const blogPosts = [
   {
     slug: 'popia-compliance-south-african-websites',
     title: 'POPIA Compliance for South African Websites: What Every Business Owner Needs to Know',
-    excerpt: 'South Africa\\'s Protection of Personal Information Act affects every business with a website. Here is what POPIA means in practice for your contact forms, cookies, and hosting.',
+    excerpt: 'South Africa\'s Protection of Personal Information Act affects every business with a website. Here is what POPIA means in practice for your contact forms, cookies, and hosting.',
     date: 'December 1, 2026',
     publishedIsoDate: '2026-12-01',
     lastUpdated: '2026-12-01',
@@ -852,7 +852,7 @@ export const blogPosts = [
     category: 'Business Strategy',
     image: heroImg,
     metaTitle: 'POPIA Compliance for South African Websites: A Practical Guide | Conextsol',
-    metaDescription: 'What does South Africa\\'s POPIA mean for your website? Contact forms, cookie consent, privacy policies, and hosting compliance explained for SA business owners.',
+    metaDescription: 'What does South Africa\'s POPIA mean for your website? Contact forms, cookie consent, privacy policies, and hosting compliance explained for SA business owners.',
     content: `<h1>POPIA Compliance for South African Websites: What Every Business Owner Needs to Know</h1>
 <p>South Africa's Protection of Personal Information Act (POPIA), Act 4 of 2013, reached its full implementation date on 1 July 2021. It regulates how responsible parties process personal information and gives people rights over information about them. The law is relevant to businesses of every size, not only large companies with dedicated legal teams. If your business website receives enquiries, measures visitor activity, sends newsletters or sells products, review how that information is collected and handled.</p>
 <p>A website can collect personal information in ways that are easy to overlook. A contact form may capture a name and phone number; an analytics tool may record technical identifiers; an online shop may retain delivery details and order history. POPIA compliance is not just a policy document or a hosting setting. It involves why data is collected, the safeguards around it, who can access it, and how a business responds to requests. This guide explains the main website considerations and where design and hosting fit in.</p>
