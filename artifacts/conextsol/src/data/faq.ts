@@ -21,6 +21,10 @@ export const faqCategories = [
       {
         question: "What makes Conextsol different?",
         answer: "We are results-obsessed. We don't just build visually appealing websites; we build digital assets engineered to convert visitors into leads, rank strongly on search engines, and solve real business bottlenecks."
+      },
+      {
+        question: "Do you work with clients outside Cape Town?",
+        answer: "Yes. We serve businesses in Cape Town and across South Africa, including Johannesburg, Durban, and Pretoria. Projects can be managed remotely through Teams, Zoom, or Google Meet."
       }
     ]
   },
@@ -58,6 +62,27 @@ export const faqCategories = [
       {
         question: "Can I update the website myself?",
         answer: "Yes. We build user-friendly CMS dashboards allowing you to easily edit text, add blog posts, and update media without technical knowledge."
+      },
+      {
+        question: "What if I am not happy with the design direction?",
+        answer: "Our website design process includes revisions before the final launch. The service information does not specify a fixed number of revision rounds, so the number of rounds is not stated as a standard allowance."
+      }
+    ]
+  },
+  {
+    category: "E-commerce Development",
+    items: [
+      {
+        question: "Which South African payment gateways do you integrate?",
+        answer: "We routinely integrate local gateways like PayFast, Peach Payments, Yoco, and Ozow, as well as international options like Stripe and PayPal."
+      },
+      {
+        question: "Can you migrate my existing WooCommerce or Shopify store?",
+        answer: "Yes. We offer secure migration services for existing stores, including moving products, customer data, and order history. We work with both WooCommerce and Shopify, and can plan the migration around your store's platform and requirements."
+      },
+      {
+        question: "Can my e-commerce store handle high traffic like Black Friday?",
+        answer: "We build stores with Custom E-commerce Architecture, supported by scalable database architecture from our web development service. Scalability is considered as part of the store's technical foundation so it can be designed around your business and its growth requirements."
       }
     ]
   },
@@ -83,6 +108,23 @@ export const faqCategories = [
     ]
   },
   {
+    category: "Google Ads",
+    items: [
+      {
+        question: "Do you manage Facebook or Meta Ads as well?",
+        answer: "Meta Ads are not listed among our services. Conextsol specializes in in-house Google Ads management, including Google Search, Display, and Performance Max campaigns."
+      },
+      {
+        question: "Can Google Ads target specific cities or regions in South Africa?",
+        answer: "Our Google Ads service is designed for Cape Town and South African SMEs, professional service providers, and B2B companies seeking predictable lead generation. The service information does not specify city-by-city or radius-targeting options."
+      },
+      {
+        question: "What happens to my Google Ads account if I stop working with you?",
+        answer: "Your Google Ads account remains yours. We manage campaigns directly inside your own account, and you retain 100% ownership, complete transparency, and data ownership."
+      }
+    ]
+  },
+  {
     category: "Pricing & Process",
     items: [
       {
@@ -98,12 +140,33 @@ export const faqCategories = [
         answer: "We typically work on a 50% deposit to commence work, 25% upon design sign-off, and the final 25% prior to live deployment."
       },
       {
+        question: "Do you require a deposit to start a project?",
+        answer: "Yes. We typically require a 50% deposit to commence work, followed by 25% upon design sign-off and the final 25% prior to live deployment."
+      },
+      {
         question: "What happens in the discovery phase?",
         answer: "We analyze your business goals, target audience, competitors, and technical requirements to construct a strategic blueprint for your web build."
       },
       {
         question: "How do we communicate during the project?",
         answer: "We maintain clear communication through dedicated channels (email, Slack, or WhatsApp) and scheduled progress reviews."
+      }
+    ]
+  },
+  {
+    category: "Legal & Compliance",
+    items: [
+      {
+        question: "Are your websites POPIA compliant?",
+        answer: "We build with security and data protection in mind. Our e-commerce builds include SSL certificates, secure payment processing compliance, and protection against common vulnerabilities. Our managed hosting service also includes POPIA-compliant security and firewall protection. These measures support secure handling, but the service information does not establish that every website or business data-processing activity is automatically POPIA compliant."
+      },
+      {
+        question: "Is a Privacy Policy included with my website?",
+        answer: "Conextsol has a Privacy Policy page at /privacy-policy. The services information does not specify whether a custom Privacy Policy is included as standard with every website build, so this should be confirmed as part of the project scope."
+      },
+      {
+        question: "Do you include Terms and Conditions with the website?",
+        answer: "Conextsol has a Terms of Service page at /terms-of-service. The services information does not specify whether a Terms and Conditions document or template is included as standard with website projects. We recommend having website terms reviewed by a South African attorney."
       }
     ]
   },
