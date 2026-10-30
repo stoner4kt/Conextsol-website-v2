@@ -945,6 +945,7 @@ export const blogPosts = [
   }
 
 ,
+,
   {
     slug: 'what-is-website-maintenance-south-africa',
     title: 'What is Website Maintenance? Why Your South African Business Cannot Ignore It',
@@ -991,4 +992,4 @@ export const blogPosts = [
 <p>Your website should not be treated as a project that ends on launch day. Software needs updates, vulnerabilities need attention, backups need to be available, performance needs ongoing care, and downtime needs to be identified. A maintenance plan brings these responsibilities into a regular process through monitoring, daily backups, security patching, performance optimization, analytics reporting and priority technical support.</p>
 <p>Managed hosting complements that work by looking after the infrastructure underneath the website, including server configuration, SSL certificates, DNS routing, firewall protection, offsite daily backups and 24/7 security monitoring. Together, maintenance and managed hosting address both the website itself and the environment in which it runs. Explore Conextsol's <a href="/services/website-maintenance">website maintenance services</a>, learn more about <a href="/services/managed-hosting">managed hosting</a>, or <a href="/contact">contact Conextsol</a> to discuss ongoing care for your business website.</p>`
   }
-].join("\n");
+];
