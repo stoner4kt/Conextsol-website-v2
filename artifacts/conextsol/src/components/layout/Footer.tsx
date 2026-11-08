@@ -155,6 +155,16 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://share.google/wjQFYxNsTwgSpvjxE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-50/80 hover:text-white transition-colors text-sm"
+                >
+                  View Our Google Business Profile
+                </a>
+              </li>
             </ul>
           </div>
 
