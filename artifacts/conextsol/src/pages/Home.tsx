@@ -69,7 +69,7 @@ export default function Home() {
             >
               <div className="section-kicker gap-2 mb-7">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Taking on new projects for 2026
+                Taking on new projects for 2027
               </div>
             </motion.div>
 
